@@ -1,0 +1,18 @@
+provider: freee
+apis_io: https://apis.io/providers/freee/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      display_name: display_name
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/freee-openapi.yml#DELETE /hr/api/v1/employees/{id}
+    - openapi/_original/freee-openapi.yml#GET /hr/api/v1/employees
+    - openapi/_original/freee-openapi.yml#GET /hr/api/v1/employees/{id}
+    - openapi/_original/freee-openapi.yml#POST /hr/api/v1/employees
+    - openapi/_original/freee-openapi.yml#PUT /hr/api/v1/employees/{id}

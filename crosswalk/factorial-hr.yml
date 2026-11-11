@@ -1,0 +1,30 @@
+provider: factorial-hr
+apis_io: https://apis.io/providers/factorial-hr/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      work_email: email
+      last_name: last_name
+      first_name: first_name
+      status: state
+      job_title: role
+      gender: gender
+      manager_id: manager_id
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/factorial-openapi.yml#GET /v2/core/employees
+    - openapi/_original/factorial-openapi.yml#GET /v2/core/employees/{id}
+    - openapi/_original/factorial-openapi.yml#POST /v2/core/employees
+    - openapi/_original/factorial-openapi.yml#PUT /v2/core/employees/{id}
+  work_location:
+    path_segment:
+    - locations
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/factorial-resources-api-openapi.yml#GET /resources/companies/locations
+    - openapi/_original/factorial-resources-api-openapi.yml#POST /resources/companies/locations

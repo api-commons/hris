@@ -1,0 +1,112 @@
+provider: kombo
+apis_io: https://apis.io/providers/kombo/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id:
+      - id
+      - remote_id
+      work_email: work_email
+      last_name: last_name
+      first_name: first_name
+      status: employment_status
+      hire_date: start_date
+      employment_type: employment_type
+      job_title: job_title
+      location_id:
+      - work_location_id
+      - work_location
+      - location_id
+      date_of_birth: date_of_birth
+      metadata: custom_fields
+      created_at: remote_created_at
+      employee_number: employee_number
+      gender: gender
+      manager_id:
+      - manager_id
+      - manager
+      termination_date: termination_date
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kombo-openapi.json#GET /hris/employees
+    - openapi/_original/kombo-openapi.json#PATCH /hris/employees/{employee_id}
+    - openapi/_original/kombo-openapi.json#POST /hris/employees
+  team:
+    path_segment:
+    - teams
+    properties:
+      id:
+      - id
+      - remote_id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kombo-openapi.json#GET /hris/teams
+  work_location:
+    path_segment:
+    - locations
+    properties:
+      id:
+      - id
+      - remote_id
+      name: name
+      address: address
+      metadata: custom_fields
+      type: type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/kombo-openapi.json#GET /hris/locations
+  absence:
+    path_segment:
+    - absences
+    properties:
+      id:
+      - id
+      - remote_id
+      end_at:
+      - end_date
+      - end_time
+      status: status
+      employee_id: employee_id
+      start_at:
+      - start_date
+      - start_time
+      type: type
+      amount: amount
+      created_at: remote_created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kombo-openapi.json#DELETE /hris/absences/{absence_id}
+    - openapi/_original/kombo-openapi.json#GET /hris/absences
+    - openapi/_original/kombo-openapi.json#POST /hris/absences
+  employment:
+    path_segment:
+    - jobs
+    - employments
+    properties:
+      id:
+      - id
+      - remote_id
+      status: status
+      employment_type: employment_type
+      effective_date: effective_date
+      employee_id: employee_id
+      job_title: job_title
+      created_at: remote_created_at
+      metadata: custom_fields
+      department_id: department
+      description: description
+      pay_currency:
+      - pay_currency
+      - salary_currency
+      location: location
+      pay_rate: pay_rate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kombo-openapi.json#GET /ai-apply/unified-api/jobs
+    - openapi/_original/kombo-openapi.json#GET /ats/jobs
+    - openapi/_original/kombo-openapi.json#GET /hris/employments

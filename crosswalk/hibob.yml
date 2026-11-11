@@ -1,0 +1,29 @@
+provider: hibob
+apis_io: https://apis.io/providers/hibob/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - people
+    properties:
+      id: id
+      work_email: email
+      last_name: surname
+      first_name: firstName
+      display_name: displayName
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/hibob-documents-api-openapi.yml#GET /docs/people/{id}
+    - openapi/_original/hibob-people-api-openapi.yml#POST /people
+    - openapi/_original/hibob-people-api-openapi.yml#POST /people/{identifier}
+    - openapi/_original/hibob-people-api-openapi.yml#PUT /people/{identifier}
+    - openapi/_original/hibob-openapi.yml#GET /docs/people/{id}
+  employment:
+    path_segment:
+    - employment
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/hibob-employee-tables-api-openapi.yml#GET /people/{id}/employment
+    - openapi/_original/hibob-openapi.yml#GET /people/{id}/employment

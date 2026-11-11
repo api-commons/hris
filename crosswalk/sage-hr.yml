@@ -1,0 +1,52 @@
+provider: sage-hr
+apis_io: https://apis.io/providers/sage-hr/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: last_name
+      first_name: first_name
+      status: employment_status
+      hire_date: employment_start_date
+      job_title: position
+      location_id: location_id
+      date_of_birth: date_of_birth
+      phone:
+      - work_phone
+      - mobile_phone
+      employee_number: employee_number
+      gender: gender
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sage-hr-openapi.yml#GET /employees
+    - openapi/_original/sage-hr-openapi.yml#GET /employees/{id}
+    - openapi/_original/sage-hr-openapi.yml#POST /employees
+    - openapi/_original/sage-hr-openapi.yml#PUT /employees/{id}
+  team:
+    path_segment:
+    - teams
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sage-hr-openapi.yml#GET /teams
+  position:
+    path_segment:
+    - positions
+    properties:
+      id: id
+      name: title
+      location: location
+      is_active: status
+      code: code
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sage-hr-openapi.yml#GET /positions
+    - openapi/_original/sage-hr-openapi.yml#GET /recruitment/positions
+    - openapi/_original/sage-hr-openapi.yml#GET /recruitment/positions/{id}

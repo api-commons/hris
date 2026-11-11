@@ -1,0 +1,23 @@
+provider: cobee
+apis_io: https://apis.io/providers/cobee/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: surname
+      status: state
+      display_name: name
+      date_of_birth: birthDate
+      metadata: metadata
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/cobee-public-api-openapi-original.json#DELETE /companies/{companyId}/employees/{employeeId}
+    - openapi/_original/cobee-public-api-openapi-original.json#GET /companies/{companyId}/employees
+    - openapi/_original/cobee-public-api-openapi-original.json#GET /companies/{companyId}/employees/{employeeId}
+    - openapi/_original/cobee-public-api-openapi-original.json#PATCH /companies/{companyId}/employees/{employeeId}
+    - openapi/_original/cobee-public-api-openapi-original.json#POST /companies/{companyId}/employees

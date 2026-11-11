@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/hris/main/schema/team.json",
+  "title": "Team",
+  "description": "The common team in People and HR, distilled from 5 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.8,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "id",
+        "remote_id"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.6,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "name"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "hris",
+    "concept": "team",
+    "providers": 5,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

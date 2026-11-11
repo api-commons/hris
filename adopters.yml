@@ -1,0 +1,414 @@
+context: hris
+generated: '2026-11-10'
+adopters:
+- provider: adp
+  apis_io: https://apis.io/providers/adp/
+  crosswalk: crosswalk/adp.yml
+  concepts:
+  - absence
+  - department
+  - employee
+  - employment
+- provider: alayacare
+  apis_io: https://apis.io/providers/alayacare/
+  crosswalk: crosswalk/alayacare.yml
+  concepts:
+  - department
+  - employee
+  - work_location
+- provider: bamboohr
+  apis_io: https://apis.io/providers/bamboohr/
+  crosswalk: crosswalk/bamboohr.yml
+  concepts:
+  - employee
+- provider: bindbee
+  apis_io: https://apis.io/providers/bindbee/
+  crosswalk: crosswalk/bindbee.yml
+  concepts:
+  - absence
+  - department
+  - employee
+  - employment
+  - work_location
+- provider: breathe-hr
+  apis_io: https://apis.io/providers/breathe-hr/
+  crosswalk: crosswalk/breathe-hr.yml
+  concepts:
+  - absence
+  - employee
+- provider: bridgit
+  apis_io: https://apis.io/providers/bridgit/
+  crosswalk: crosswalk/bridgit.yml
+  concepts:
+  - employee
+- provider: buk
+  apis_io: https://apis.io/providers/buk/
+  crosswalk: crosswalk/buk.yml
+  concepts:
+  - absence
+  - department
+  - employee
+  - employment
+  - work_location
+- provider: charliehr
+  apis_io: https://apis.io/providers/charliehr/
+  crosswalk: crosswalk/charliehr.yml
+  concepts:
+  - absence
+  - employee
+  - team
+  - work_location
+- provider: cobee
+  apis_io: https://apis.io/providers/cobee/
+  crosswalk: crosswalk/cobee.yml
+  concepts:
+  - employee
+- provider: culture-amp
+  apis_io: https://apis.io/providers/culture-amp/
+  crosswalk: crosswalk/culture-amp.yml
+  concepts:
+  - employee
+- provider: dailypay
+  apis_io: https://apis.io/providers/dailypay/
+  crosswalk: crosswalk/dailypay.yml
+  concepts:
+  - employee
+  - employment
+- provider: deel-com
+  apis_io: https://apis.io/providers/deel-com/
+  crosswalk: crosswalk/deel-com.yml
+  concepts:
+  - department
+  - employee
+  - employment
+  - position
+  - team
+  - work_location
+- provider: deputy
+  apis_io: https://apis.io/providers/deputy/
+  crosswalk: crosswalk/deputy.yml
+  concepts:
+  - absence
+  - department
+  - employee
+  - work_location
+- provider: eightfold-ai
+  apis_io: https://apis.io/providers/eightfold-ai/
+  crosswalk: crosswalk/eightfold-ai.yml
+  concepts:
+  - employee
+  - position
+- provider: employment-hero
+  apis_io: https://apis.io/providers/employment-hero/
+  crosswalk: crosswalk/employment-hero.yml
+  concepts:
+  - absence
+  - department
+  - employee
+  - work_location
+- provider: factorial-hr
+  apis_io: https://apis.io/providers/factorial-hr/
+  crosswalk: crosswalk/factorial-hr.yml
+  concepts:
+  - employee
+  - work_location
+- provider: fountain-com
+  apis_io: https://apis.io/providers/fountain-com/
+  crosswalk: crosswalk/fountain-com.yml
+  concepts:
+  - employee
+  - position
+- provider: freee
+  apis_io: https://apis.io/providers/freee/
+  crosswalk: crosswalk/freee.yml
+  concepts:
+  - employee
+- provider: freshteam
+  apis_io: https://apis.io/providers/freshteam/
+  crosswalk: crosswalk/freshteam.yml
+  concepts:
+  - department
+  - employee
+  - team
+  - work_location
+- provider: harri
+  apis_io: https://apis.io/providers/harri/
+  crosswalk: crosswalk/harri.yml
+  concepts:
+  - department
+  - employee
+  - position
+  - work_location
+- provider: hibob
+  apis_io: https://apis.io/providers/hibob/
+  crosswalk: crosswalk/hibob.yml
+  concepts:
+  - employee
+  - employment
+- provider: hr-partner
+  apis_io: https://apis.io/providers/hr-partner/
+  crosswalk: crosswalk/hr-partner.yml
+  concepts:
+  - absence
+  - employee
+  - position
+- provider: humaans-io
+  apis_io: https://apis.io/providers/humaans-io/
+  crosswalk: crosswalk/humaans-io.yml
+  concepts:
+  - employee
+  - work_location
+- provider: humanity
+  apis_io: https://apis.io/providers/humanity/
+  crosswalk: crosswalk/humanity.yml
+  concepts:
+  - employee
+  - position
+  - work_location
+- provider: keka
+  apis_io: https://apis.io/providers/keka/
+  crosswalk: crosswalk/keka.yml
+  concepts:
+  - department
+  - employee
+  - employment
+  - position
+  - work_location
+- provider: knit
+  apis_io: https://apis.io/providers/knit/
+  crosswalk: crosswalk/knit.yml
+  concepts:
+  - absence
+  - department
+  - employee
+  - employment
+  - work_location
+- provider: kombo
+  apis_io: https://apis.io/providers/kombo/
+  crosswalk: crosswalk/kombo.yml
+  concepts:
+  - absence
+  - employee
+  - employment
+  - team
+  - work_location
+- provider: kota
+  apis_io: https://apis.io/providers/kota/
+  crosswalk: crosswalk/kota.yml
+  concepts:
+  - employee
+- provider: leapsome
+  apis_io: https://apis.io/providers/leapsome/
+  crosswalk: crosswalk/leapsome.yml
+  concepts:
+  - absence
+  - employee
+  - work_location
+- provider: lucca
+  apis_io: https://apis.io/providers/lucca/
+  crosswalk: crosswalk/lucca.yml
+  concepts:
+  - department
+  - employee
+  - employment
+- provider: nayya
+  apis_io: https://apis.io/providers/nayya/
+  crosswalk: crosswalk/nayya.yml
+  concepts:
+  - employee
+- provider: onpay
+  apis_io: https://apis.io/providers/onpay/
+  crosswalk: crosswalk/onpay.yml
+  concepts:
+  - absence
+  - department
+  - employee
+  - position
+  - work_location
+- provider: oracle-fusion
+  apis_io: https://apis.io/providers/oracle-fusion/
+  crosswalk: crosswalk/oracle-fusion.yml
+  concepts:
+  - absence
+  - employee
+  - employment
+- provider: paychex-developer
+  apis_io: https://apis.io/providers/paychex-developer/
+  crosswalk: crosswalk/paychex-developer.yml
+  concepts:
+  - employee
+- provider: paylocity
+  apis_io: https://apis.io/providers/paylocity/
+  crosswalk: crosswalk/paylocity.yml
+  concepts:
+  - employee
+- provider: peakon
+  apis_io: https://apis.io/providers/peakon/
+  crosswalk: crosswalk/peakon.yml
+  concepts:
+  - employee
+- provider: peopleforce
+  apis_io: https://apis.io/providers/peopleforce/
+  crosswalk: crosswalk/peopleforce.yml
+  concepts:
+  - absence
+  - department
+  - employee
+  - position
+- provider: peoplesoft
+  apis_io: https://apis.io/providers/peoplesoft/
+  crosswalk: crosswalk/peoplesoft.yml
+  concepts:
+  - employee
+  - employment
+- provider: personio
+  apis_io: https://apis.io/providers/personio/
+  crosswalk: crosswalk/personio.yml
+  concepts:
+  - employee
+- provider: quinyx
+  apis_io: https://apis.io/providers/quinyx/
+  crosswalk: crosswalk/quinyx.yml
+  concepts:
+  - absence
+  - employee
+  - work_location
+- provider: rippling
+  apis_io: https://apis.io/providers/rippling/
+  crosswalk: crosswalk/rippling.yml
+  concepts:
+  - absence
+  - department
+  - employee
+  - team
+  - work_location
+- provider: sage-hr
+  apis_io: https://apis.io/providers/sage-hr/
+  crosswalk: crosswalk/sage-hr.yml
+  concepts:
+  - employee
+  - position
+  - team
+- provider: salsa
+  apis_io: https://apis.io/providers/salsa/
+  crosswalk: crosswalk/salsa.yml
+  concepts:
+  - employee
+  - employment
+- provider: sesame-hr
+  apis_io: https://apis.io/providers/sesame-hr/
+  crosswalk: crosswalk/sesame-hr.yml
+  concepts:
+  - department
+  - employee
+  - work_location
+- provider: simpplr
+  apis_io: https://apis.io/providers/simpplr/
+  crosswalk: crosswalk/simpplr.yml
+  concepts:
+  - employee
+  - work_location
+- provider: thatch-health
+  apis_io: https://apis.io/providers/thatch-health/
+  crosswalk: crosswalk/thatch-health.yml
+  concepts:
+  - employee
+- provider: towers-watson
+  apis_io: https://apis.io/providers/towers-watson/
+  crosswalk: crosswalk/towers-watson.yml
+  concepts:
+  - employee
+- provider: truto
+  apis_io: https://apis.io/providers/truto/
+  crosswalk: crosswalk/truto.yml
+  concepts:
+  - department
+  - employee
+  - employment
+- provider: ukg-pro
+  apis_io: https://apis.io/providers/ukg-pro/
+  crosswalk: crosswalk/ukg-pro.yml
+  concepts:
+  - employee
+- provider: university-of-wisconsin-madison
+  apis_io: https://apis.io/providers/university-of-wisconsin-madison/
+  crosswalk: crosswalk/university-of-wisconsin-madison.yml
+  concepts:
+  - employee
+  - employment
+  - work_location
+- provider: visma
+  apis_io: https://apis.io/providers/visma/
+  crosswalk: crosswalk/visma.yml
+  concepts:
+  - department
+  - employee
+  - work_location
+- provider: wagestream
+  apis_io: https://apis.io/providers/wagestream/
+  crosswalk: crosswalk/wagestream.yml
+  concepts:
+  - absence
+  - employee
+- provider: weavix
+  apis_io: https://apis.io/providers/weavix/
+  crosswalk: crosswalk/weavix.yml
+  concepts:
+  - employee
+- provider: wellhub
+  apis_io: https://apis.io/providers/wellhub/
+  crosswalk: crosswalk/wellhub.yml
+  concepts:
+  - employee
+  - employment
+- provider: workable
+  apis_io: https://apis.io/providers/workable/
+  crosswalk: crosswalk/workable.yml
+  concepts:
+  - department
+  - employee
+  - employment
+- provider: workday
+  apis_io: https://apis.io/providers/workday/
+  crosswalk: crosswalk/workday.yml
+  concepts:
+  - employee
+  - employment
+  - position
+  - team
+  - work_location
+- provider: workday-integrations
+  apis_io: https://apis.io/providers/workday-integrations/
+  crosswalk: crosswalk/workday-integrations.yml
+  concepts:
+  - employee
+  - position
+- provider: workmotion
+  apis_io: https://apis.io/providers/workmotion/
+  crosswalk: crosswalk/workmotion.yml
+  concepts:
+  - absence
+  - employee
+  - employment
+- provider: workstream
+  apis_io: https://apis.io/providers/workstream/
+  crosswalk: crosswalk/workstream.yml
+  concepts:
+  - department
+  - employee
+  - position
+  - work_location
+- provider: zeal-hq
+  apis_io: https://apis.io/providers/zeal-hq/
+  crosswalk: crosswalk/zeal-hq.yml
+  concepts:
+  - employee
+  - work_location
+- provider: zenhr-inc
+  apis_io: https://apis.io/providers/zenhr-inc/
+  crosswalk: crosswalk/zenhr-inc.yml
+  concepts:
+  - department
+  - employee
+  - position
+  - work_location

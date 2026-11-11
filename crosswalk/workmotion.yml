@@ -1,0 +1,56 @@
+provider: workmotion
+apis_io: https://apis.io/providers/workmotion/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: lastName
+      first_name: firstName
+      status: status
+      hire_date: startDate
+      employment_type: employmentType
+      created_at: createdAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/workmotion-openapi.yml#GET /employees
+    - openapi/_original/workmotion-openapi.yml#GET /employees/{employeeId}
+    - openapi/_original/workmotion-openapi.yml#PATCH /employees/{employeeId}
+    - openapi/_original/workmotion-openapi.yml#POST /employees
+  absence:
+    path_segment:
+    - absences
+    properties:
+      id: id
+      end_at: endDate
+      status: status
+      employee_id: employeeId
+      start_at: startDate
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/workmotion-openapi.yml#GET /absences
+    - openapi/_original/workmotion-openapi.yml#GET /absences/{absenceId}
+    - openapi/_original/workmotion-openapi.yml#POST /absences
+  employment:
+    path_segment:
+    - contracts
+    properties:
+      id: id
+      status: status
+      effective_date:
+      - startDate
+      - effectiveDate
+      employee_id: employeeId
+      created_at: createdAt
+      pay_currency: currency
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/workmotion-openapi.yml#GET /contracts/{contractId}
+    - openapi/_original/workmotion-openapi.yml#GET /employees/{employeeId}/contracts
+    - openapi/_original/workmotion-openapi.yml#PATCH /contracts/{contractId}
+    - openapi/_original/workmotion-openapi.yml#POST /employees/{employeeId}/contracts

@@ -1,0 +1,43 @@
+provider: freshteam
+apis_io: https://apis.io/providers/freshteam/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      last_name: last_name
+      first_name: first_name
+      status: status
+      department_id: department_id
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/freshteam-openapi.yml#GET /employees
+    - openapi/_original/freshteam-openapi.yml#GET /employees/{id}
+    - openapi/_original/freshteam-openapi.yml#POST /employees
+    - openapi/_original/freshteam-openapi.yml#PUT /employees/{id}
+  department:
+    path_segment:
+    - departments
+    - business_units
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/freshteam-openapi.yml#GET /business_units
+    - openapi/_original/freshteam-openapi.yml#GET /departments
+  team:
+    path_segment:
+    - teams
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/freshteam-openapi.yml#GET /teams
+  work_location:
+    path_segment:
+    - branches
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/freshteam-openapi.yml#GET /branches

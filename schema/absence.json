@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/hris/main/schema/absence.json",
+  "title": "Absence",
+  "description": "The common absence in People and HR, distilled from 16 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.812,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "id",
+        "remote_id",
+        "_id",
+        "AbsenceId"
+      ]
+    },
+    "end_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.688,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "end_date",
+        "end_time",
+        "end",
+        "EndDate",
+        "endDate"
+      ],
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.688,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "status",
+        "Status"
+      ]
+    },
+    "employee_id": {
+      "type": "integer",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.625,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "employee_id",
+        "employee",
+        "employeeId",
+        "Employee",
+        "userId"
+      ]
+    },
+    "start_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.625,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "start_date",
+        "start_time",
+        "start",
+        "StartDate",
+        "startDate"
+      ],
+      "format": "date-time"
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.625,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "type",
+        "leave_type",
+        "request_type",
+        "kind",
+        "absenceType",
+        "AbsenceType"
+      ]
+    },
+    "amount": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.312,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "amount",
+        "units",
+        "hours",
+        "duration",
+        "Duration"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.25,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "created_at",
+        "remote_created_at",
+        "createdAt"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "hris",
+    "concept": "absence",
+    "providers": 16,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

@@ -1,0 +1,24 @@
+provider: peoplesoft
+apis_io: https://apis.io/providers/peoplesoft/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/hcm.yml#GET /employees
+    - openapi/_original/hcm.yml#GET /employees/{employeeId}
+  employment:
+    path_segment:
+    - jobs
+    properties:
+      job_title: title
+      department_id: department
+      location: location
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/recruiting-talent-management.yml#GET /jobs
+    - openapi/_original/recruiting-talent-management.yml#GET /jobs/{jobId}

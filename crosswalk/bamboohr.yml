@@ -1,0 +1,24 @@
+provider: bamboohr
+apis_io: https://apis.io/providers/bamboohr/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: workEmail
+      last_name: lastName
+      first_name: firstName
+      hire_date: hireDate
+      job_title: jobTitle
+      display_name: displayName
+      location_id: location
+      department_id: department
+      manager_id: supervisor
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/bamboohr-openapi.yml#GET /employees/{id}
+    - openapi/_original/bamboohr-openapi.yml#POST /employees
+    - openapi/_original/bamboohr-openapi.yml#POST /employees/{id}

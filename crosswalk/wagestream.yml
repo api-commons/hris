@@ -1,0 +1,26 @@
+provider: wagestream
+apis_io: https://apis.io/providers/wagestream/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/wagestream-integrations-api-openapi.json#GET /employees
+    - openapi/_original/wagestream-integrations-api-openapi.json#POST /employees
+    - openapi/_original/wagestream-integrations-api-openapi.yml#GET /employees
+    - openapi/_original/wagestream-integrations-api-openapi.yml#POST /employees
+  absence:
+    path_segment:
+    - absences
+    properties:
+      status: status
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/wagestream-integrations-api-openapi.json#GET /absences
+    - openapi/_original/wagestream-integrations-api-openapi.json#POST /absences
+    - openapi/_original/wagestream-integrations-api-openapi.yml#GET /absences
+    - openapi/_original/wagestream-integrations-api-openapi.yml#POST /absences

@@ -1,0 +1,39 @@
+provider: breathe-hr
+apis_io: https://apis.io/providers/breathe-hr/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: last_name
+      first_name: first_name
+      status: status
+      hire_date: start_date
+      job_title: job_title
+      date_of_birth: date_of_birth
+      department_id: department
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/breathe-hr-openapi.yml#DELETE /employees/{id}
+    - openapi/_original/breathe-hr-openapi.yml#GET /employees
+    - openapi/_original/breathe-hr-openapi.yml#GET /employees/{id}
+    - openapi/_original/breathe-hr-openapi.yml#POST /employees
+    - openapi/_original/breathe-hr-openapi.yml#PUT /employees/{id}
+  absence:
+    path_segment:
+    - absences
+    properties:
+      id: id
+      end_at: end_date
+      status: status
+      employee_id: employee_id
+      start_at: start_date
+      type: kind
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/breathe-hr-openapi.yml#GET /absences
+    - openapi/_original/breathe-hr-openapi.yml#GET /absences/{id}

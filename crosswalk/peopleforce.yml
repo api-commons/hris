@@ -1,0 +1,40 @@
+provider: peopleforce
+apis_io: https://apis.io/providers/peopleforce/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/peopleforce-openapi.yml#GET /employees
+    - openapi/_original/peopleforce-openapi.yml#GET /employees/{id}
+    - openapi/_original/peopleforce-openapi.yml#PATCH /employees/{id}
+    - openapi/_original/peopleforce-openapi.yml#POST /employees
+  department:
+    path_segment:
+    - departments
+    - divisions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/peopleforce-openapi.yml#GET /departments
+    - openapi/_original/peopleforce-openapi.yml#GET /divisions
+  position:
+    path_segment:
+    - positions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/peopleforce-openapi.yml#GET /positions
+  absence:
+    path_segment:
+    - leave_requests
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/peopleforce-openapi.yml#GET /leave_requests
+    - openapi/_original/peopleforce-openapi.yml#GET /leave_requests/{id}
+    - openapi/_original/peopleforce-openapi.yml#POST /leave_requests

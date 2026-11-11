@@ -1,0 +1,17 @@
+provider: paychex-developer
+apis_io: https://apis.io/providers/paychex-developer/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - workers
+    properties:
+      employment_type: workerType
+      display_name: name
+      employee_id: workerId
+      metadata: metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/paychex-workers-openapi.yml#GET /companies/{companyId}/workers
+    - openapi/_original/paychex-workers-openapi.yml#GET /companies/{companyId}/workers/{workerId}

@@ -1,0 +1,51 @@
+provider: adp
+apis_io: https://apis.io/providers/adp/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - workers
+    properties:
+      employee_id: workerID
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/adp-hr-workers-v2-openapi.yml#GET /hr/v2/workers
+    - openapi/_original/adp-hr-workers-v2-openapi.yml#GET /hr/v2/workers/{aoid}
+    - openapi/_original/adp-workers-openapi.yml#GET /hr/v2/workers
+    - openapi/_original/adp-workers-openapi.yml#GET /hr/v2/workers/{aoid}
+    - openapi/_original/hr-workers-v2-openapi-original.json#GET /hr/v2/workers
+  department:
+    path_segment:
+    - cost-centers
+    - departments
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/adp-hcm-validation-tables-v1-openapi.yml#GET /hcm/v1/validation-tables/cost-centers
+    - openapi/_original/adp-hcm-validation-tables-v1-openapi.yml#GET /hcm/v1/validation-tables/departments
+    - openapi/_original/adp-hcm-validation-tables-v1-openapi.yml#POST /hcm/v1/validation-tables/cost-centers
+    - openapi/_original/adp-hcm-validation-tables-v1-openapi.yml#POST /hcm/v1/validation-tables/departments
+    - openapi/_original/hcm-validation-tables-v1-openapi-original.json#GET /hcm/v1/validation-tables/cost-centers
+  absence:
+    path_segment:
+    - time-off-requests
+    - leaves
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/adp-hr-worker-leaves-v2-openapi.yml#GET /hr/v2/workers/{aoid}/leaves
+    - openapi/_original/adp-time-time-off-requests-v2-openapi.yml#GET /time/v2/workers/{aoid}/time-off-details/time-off-requests
+    - openapi/_original/adp-time-time-off-requests-v2-openapi.yml#POST /time/v2/workers/{aoid}/time-off-requests
+    - openapi/_original/adp-time-time-off-requests-v2-openapi.yml#PUT /time/v2/workers/{aoid}/time-off-requests/{request-id}
+    - openapi/_original/hr-worker-leaves-v2-openapi-original.json#GET /hr/v2/workers/{aoid}/leaves
+  employment:
+    path_segment:
+    - jobs
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/adp-hcm-validation-tables-v1-openapi.yml#GET /hcm/v1/validation-tables/jobs/{item-id}
+    - openapi/_original/adp-hcm-validation-tables-v1-openapi.yml#POST /hcm/v1/validation-tables/jobs
+    - openapi/_original/hcm-validation-tables-v1-openapi-original.json#GET /hcm/v1/validation-tables/jobs/{item-id}
+    - openapi/_original/hcm-validation-tables-v1-openapi-original.json#POST /hcm/v1/validation-tables/jobs

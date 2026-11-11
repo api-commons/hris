@@ -1,0 +1,45 @@
+provider: quinyx
+apis_io: https://apis.io/providers/quinyx/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    - employee
+    properties:
+      id: id
+      work_email: email
+      display_name: name
+      employee_id: employeeId
+      created_at: created
+      employee_number: badgeNumber
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/quinyx-api-v2-openapi.yml#GET /v2/absence-types/groups/{groupId}/employees/{employeeId}
+    - openapi/_original/quinyx-api-v2-openapi.yml#GET /v2/collaboration-groups/by-root/{rootCollaborationGroupId}/employee/{employeeId}
+    - openapi/_original/quinyx-api-v2-openapi.yml#GET /v2/collaboration-groups/groups/employee/{employeeId}
+    - openapi/_original/quinyx-api-v2-openapi.yml#GET /v2/collaboration-groups/groups/{collaborationGroupId}/employees
+    - openapi/_original/quinyx-api-v2-openapi.yml#GET /v2/schedule-availability/v2/employees/{employeeId}
+  work_location:
+    path_segment:
+    - locations
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/quinyx-api-v2-openapi.yml#DELETE /v2/organisation/groups/{groupId}/locations/{locationId}
+    - openapi/_original/quinyx-api-v2-openapi.yml#GET /v2/organisation/groups/{groupId}/locations
+    - openapi/_original/quinyx-api-v2-openapi.yml#GET /v2/organisation/groups/{groupId}/locations/{locationId}
+    - openapi/_original/quinyx-api-v2-openapi.yml#POST /v2/organisation/groups/{groupId}/locations
+    - openapi/_original/quinyx-api-v2-openapi.yml#PUT /v2/organisation/groups/{groupId}/locations/{locationId}
+  absence:
+    path_segment:
+    - absences
+    properties:
+      id: id
+      end_at: end
+      employee_id: employeeId
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/quinyx-api-v2-openapi.yml#DELETE /v2/schedule/groups/{groupId}/absences/{absenceId}
+    - openapi/_original/quinyx-api-v2-openapi.yml#POST /v2/schedule/groups/{groupId}/absences

@@ -1,0 +1,19 @@
+provider: ukg-pro
+apis_io: https://apis.io/providers/ukg-pro/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      work_email: emailAddress
+      last_name: lastName
+      first_name: firstName
+      status: status
+      hire_date: hireDate
+      employee_id: employeeId
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/ukg-pro-openapi.yml#GET /personnel/v1/employees
+    - openapi/_original/ukg-pro-openapi.yml#GET /personnel/v1/employees/{employeeId}

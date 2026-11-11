@@ -1,0 +1,24 @@
+provider: thatch-health
+apis_io: https://apis.io/providers/thatch-health/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: work_email
+      last_name: last_name
+      first_name: first_name
+      hire_date: start_date
+      date_of_birth: date_of_birth
+      metadata: metadata
+      termination_date: end_date
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/thatch-health-partners-openapi.yml#GET /employees
+    - openapi/_original/thatch-health-partners-openapi.yml#GET /employees/{id}
+    - openapi/_original/thatch-health-partners-openapi.yml#PATCH /employees/{id}
+    - openapi/_original/thatch-health-partners-openapi.yml#POST /employees
+    - openapi/_original/thatch-health-platforms-openapi-original.yml#GET /employees

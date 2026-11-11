@@ -1,0 +1,73 @@
+provider: knit
+apis_io: https://apis.io/providers/knit/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: last_name
+      first_name: first_name
+      status: employment_status
+      hire_date: start_date
+      job_title: job_title
+      location_id: location
+      department_id: department
+      manager_id: manager_id
+      termination_date: termination_date
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/knit-unified-api-openapi.yml#GET /employees
+    - openapi/_original/knit-unified-api-openapi.yml#GET /employees/{id}
+  department:
+    path_segment:
+    - departments
+    properties:
+      id: id
+      name: name
+      parent_id: parent_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/knit-unified-api-openapi.yml#GET /departments
+  work_location:
+    path_segment:
+    - locations
+    properties:
+      id: id
+      name: name
+      status: state
+      country: country
+      address: address
+      city: city
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/knit-unified-api-openapi.yml#GET /locations
+  absence:
+    path_segment:
+    - time-off
+    properties:
+      id: id
+      end_at: end_date
+      status: status
+      employee_id: employee_id
+      start_at: start_date
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/knit-unified-api-openapi.yml#GET /time-off
+  employment:
+    path_segment:
+    - jobs
+    properties:
+      id: id
+      status: status
+      job_title: title
+      department_id: department
+      description: description
+      location: location
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/knit-unified-api-openapi.yml#GET /jobs

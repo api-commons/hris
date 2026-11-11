@@ -1,0 +1,33 @@
+provider: workable
+apis_io: https://apis.io/providers/workable/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/workable-openapi.yml#GET /employees
+    - openapi/_original/workable-openapi.yml#GET /employees/{id}
+    - openapi/_original/workable-openapi.yml#POST /employees
+    - openapi/_original/workable-openapi.yml#PUT /employees/{id}
+  department:
+    path_segment:
+    - departments
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/workable-openapi.yml#DELETE /departments/{id}
+    - openapi/_original/workable-openapi.yml#GET /departments
+    - openapi/_original/workable-openapi.yml#POST /departments
+    - openapi/_original/workable-openapi.yml#PUT /departments
+  employment:
+    path_segment:
+    - jobs
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/workable-openapi.yml#GET /jobs
+    - openapi/_original/workable-openapi.yml#GET /jobs/{shortcode}

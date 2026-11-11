@@ -1,0 +1,136 @@
+provider: deel-com
+apis_io: https://apis.io/providers/deel-com/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - people
+    - worker
+    - workers
+    - employees
+    properties:
+      id: id
+      work_email:
+      - emails
+      - email
+      - work_email
+      last_name:
+      - last_name
+      - legal_last_name
+      first_name:
+      - first_name
+      - preferred_first_name
+      - legal_first_name
+      status:
+      - status
+      - state
+      hire_date:
+      - start_date
+      - hire_date
+      employment_type:
+      - type
+      - employment_type
+      job_title: job_title
+      display_name:
+      - full_name
+      - preferred_name
+      location_id: work_location
+      date_of_birth:
+      - birth_date
+      - date_of_birth
+      employee_id:
+      - user_id
+      - worker_id
+      metadata: custom_fields
+      department_id: department
+      created_at: created_at
+      employee_number: employee_number
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/deel-com-openapi.yml#GET /people
+    - openapi/_original/deel-com-openapi.yml#GET /people/{hris_profile_id}
+    - openapi/_original/deel-com-openapi.yml#POST /eor/worker
+    - openapi/_original/deel-com-openapi.yml#POST /gp/workers
+    - openapi/_original/deel-com-openapi.yml#POST /people
+  department:
+    path_segment:
+    - departments
+    - cost-centers
+    - department
+    properties:
+      id: id
+      name: name
+      parent_id: parent
+      department_id: department_id
+      updated_at:
+      - updated_at
+      - updated
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/deel-com-openapi.yml#GET /ats/departments
+    - openapi/_original/deel-com-openapi.yml#GET /departments
+    - openapi/_original/deel-com-openapi.yml#GET /legal-entities/{legal_entity_id}/cost-centers
+    - openapi/_original/deel-com-openapi.yml#POST /contracts/{contract_id}/cost-centers
+    - openapi/_original/deel-com-openapi.yml#PUT /people/{id}/department
+  team:
+    path_segment:
+    - teams
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/deel-com-openapi.yml#GET /ats/teams
+    - openapi/_original/deel-com-openapi.yml#GET /teams
+  position:
+    path_segment:
+    - job-titles
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/deel-com-openapi.yml#GET /lookups/job-titles
+  work_location:
+    path_segment:
+    - locations
+    - location
+    properties:
+      id: id
+      name: name
+      status: status
+      country: country_code
+      city: city
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/deel-com-openapi.yml#GET /ats/locations
+    - openapi/_original/deel-com-openapi.yml#POST /it/assets/{asset_id}/location
+  employment:
+    path_segment:
+    - contracts
+    - jobs
+    properties:
+      id: id
+      status: status
+      employment_type:
+      - type
+      - employment_type
+      effective_date: start_date
+      employee_id: employee
+      job_title:
+      - title
+      - job_title
+      created_at: created_at
+      metadata: custom_fields
+      pay_currency: currency
+      location: location
+      pay_rate: salary
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/deel-com-openapi.yml#GET /ats/jobs
+    - openapi/_original/deel-com-openapi.yml#GET /contracts
+    - openapi/_original/deel-com-openapi.yml#GET /contracts/{contract_id}
+    - openapi/_original/deel-com-openapi.yml#PATCH /contracts/{contract_id}
+    - openapi/_original/deel-com-openapi.yml#POST /ats/jobs

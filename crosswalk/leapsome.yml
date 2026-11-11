@@ -1,0 +1,51 @@
+provider: leapsome
+apis_io: https://apis.io/providers/leapsome/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: lastname
+      first_name: firstname
+      status: status
+      hire_date: startDate
+      job_title: title
+      location_id: workLocation
+      phone: phone
+      metadata: customAttributes
+      manager_id: manager
+      termination_date: endDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/leapsome-content-api-openapi.yml#GET /employees
+  work_location:
+    path_segment:
+    - work-locations
+    properties:
+      id: id
+      name: name
+      status: status
+      country: country
+      address: street
+      city: city
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/leapsome-content-api-openapi.yml#GET /work-locations
+  absence:
+    path_segment:
+    - absences
+    properties:
+      id: _id
+      end_at: end
+      status: status
+      employee_id: userId
+      start_at: start
+      type: absenceType
+      created_at: createdAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/leapsome-content-api-openapi.yml#GET /absences

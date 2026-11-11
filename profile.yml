@@ -1,0 +1,1185 @@
+context: hris
+name: People and HR
+generated: '2026-11-10'
+version: 0.1.0-draft.20261110
+status: draft
+cohort:
+  tags:
+  - Human Resources
+  - HRIS
+  - HR Tech
+  - HR
+  - HCM
+  - Human Capital Management
+  - Workforce Management
+  - People Operations
+  providers_with_harvested_openapi: 171
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded:
+  employee:
+    supaglue: /persons here are enrichment records of companies
+  department:
+    genesys: /authorization/divisions are access-control partitions
+duplicates:
+  workday:
+  - workday-advanced-compensation
+  - workday-integration
+  - workday-payroll
+  - workday-recruiting
+  adp:
+  - automatic-data-processing
+  hibob:
+  - bob
+  ethena:
+  - goethena
+shared_specs: {}
+concepts:
+  employee:
+    segments_seen:
+      employees: 44
+      people: 9
+      workers: 8
+      employee: 8
+      persons: 3
+      team_members: 2
+      worker: 1
+      staff: 1
+    providers_exposing: 61
+    providers_with_readable_schema: 55
+    operations:
+    - operation: GET collection
+      providers: 58
+      share: 0.951
+      tier: core
+    - operation: GET item
+      providers: 53
+      share: 0.869
+      tier: core
+    - operation: POST collection
+      providers: 41
+      share: 0.672
+      tier: core
+    - operation: UPDATE item
+      providers: 35
+      share: 0.574
+      tier: core
+    - operation: DELETE item
+      providers: 15
+      share: 0.246
+      tier: extended
+    - operation: POST item
+      providers: 5
+      share: 0.082
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.016
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 45
+      share: 0.818
+      type: string
+      spellings:
+      - id
+      - remote_id
+      - remoteId
+      - Id
+      - uuid
+    - name: work_email
+      tier: core
+      providers: 40
+      share: 0.727
+      type: string
+      spellings:
+      - email
+      - work_email
+      - emailAddress
+      - workEmail
+      - emails
+      - Email
+      - WorkEmail
+    - name: last_name
+      tier: core
+      providers: 39
+      share: 0.709
+      type: string
+      spellings:
+      - last_name
+      - lastName
+      - surname
+      - lastname
+      - LastName
+      - legal_last_name
+      - familyName
+      - last-name
+    - name: first_name
+      tier: core
+      providers: 37
+      share: 0.673
+      type: string
+      spellings:
+      - first_name
+      - firstName
+      - firstname
+      - FirstName
+      - preferred_first_name
+      - legal_first_name
+      - preferredFirstName
+      - givenName
+    - name: status
+      tier: core
+      providers: 32
+      share: 0.582
+      type: string
+      spellings:
+      - status
+      - state
+      - employment_status
+      - employmentStatus
+      - active
+      - State
+    - name: hire_date
+      tier: extended
+      providers: 24
+      share: 0.436
+      type: string
+      spellings:
+      - start_date
+      - startDate
+      - hireDate
+      - hire_date
+      - HireDate
+      - employment_start_date
+    - name: employment_type
+      tier: extended
+      providers: 21
+      share: 0.382
+      type: string
+      spellings:
+      - type
+      - employmentType
+      - workerType
+      - employment_type
+      - employeeType
+      - employee_type
+      - WorkerType
+      - Type
+    - name: job_title
+      tier: extended
+      providers: 21
+      share: 0.382
+      type: string
+      spellings:
+      - job_title
+      - title
+      - jobTitle
+      - position
+      - role
+    - name: display_name
+      tier: extended
+      providers: 20
+      share: 0.364
+      type: string
+      spellings:
+      - name
+      - full_name
+      - displayName
+      - preferred_name
+      - preferredName
+      - display_name
+      - DisplayName
+    - name: location_id
+      tier: extended
+      providers: 20
+      share: 0.364
+      type: string
+      spellings:
+      - location
+      - location_id
+      - work_location
+      - office
+      - locationId
+      - work_location_id
+      - workLocation
+    - name: date_of_birth
+      tier: extended
+      providers: 18
+      share: 0.327
+      type: string
+      spellings:
+      - date_of_birth
+      - dateOfBirth
+      - birthday
+      - birthDate
+      - birth_date
+      - DateOfBirth
+      - dob
+    - name: phone
+      tier: extended
+      providers: 18
+      share: 0.327
+      type: string
+      spellings:
+      - phone
+      - phoneNumber
+      - phone_number
+      - Phone
+      - workPhone
+      - mobilePhone
+      - PhoneNumber
+      - work_phone
+    - name: employee_id
+      tier: extended
+      providers: 17
+      share: 0.309
+      type: string
+      spellings:
+      - employeeId
+      - employee_id
+      - workerID
+      - user_id
+      - person_id
+      - worker_id
+      - userId
+      - PersonId
+    - name: metadata
+      tier: extended
+      providers: 16
+      share: 0.291
+      type: object
+      spellings:
+      - metadata
+      - custom_fields
+      - attributes
+      - customAttributes
+      - custom_attributes
+      - custom
+    - name: department_id
+      tier: extended
+      providers: 15
+      share: 0.273
+      type: string
+      spellings:
+      - department
+      - department_id
+      - departmentId
+    - name: created_at
+      tier: extended
+      providers: 13
+      share: 0.236
+      type: string
+      spellings:
+      - createdAt
+      - remote_created_at
+      - created_at
+      - dateCreated
+      - CreationDate
+      - created
+    - name: employee_number
+      tier: extended
+      providers: 12
+      share: 0.218
+      type: string
+      spellings:
+      - employee_number
+      - employeeNumber
+      - payroll_id
+      - payrollId
+      - badgeNumber
+      - EmployeeNumber
+    - name: gender
+      tier: extended
+      providers: 12
+      share: 0.218
+      type: string
+      spellings:
+      - gender
+    - name: manager_id
+      tier: extended
+      providers: 12
+      share: 0.218
+      type: string
+      spellings:
+      - manager
+      - manager_id
+      - managerId
+      - supervisor
+    - name: termination_date
+      tier: extended
+      providers: 12
+      share: 0.218
+      type: string
+      spellings:
+      - termination_date
+      - endDate
+      - end_date
+      - terminationDate
+    long_tail_count: 874
+    long_tail_sample:
+    - updated_at
+    - address
+    - city
+    - middle_name
+    - personal_email
+    - team_ids
+    - company_id
+    - external_id
+    - avatar
+    - country
+    - employment
+    - marital_status
+    - nationality
+    - ssn
+    - employer_id
+    - home_phone
+    - timezone
+    - zip
+    - citizenship
+    - compensation
+    - description
+    - designation
+    - emergency_contact
+    - ethnicity
+    - home_address
+    - home_phone_number
+    - legal_entity_id
+    - pay_type
+    - position_id
+    - username
+    - additional_managers
+    - addresses
+    - bank_account
+    - bank_accounts
+    - birth_day
+    - branch
+    - branch_id
+    - code
+    - company
+    - company_name
+  department:
+    segments_seen:
+      departments: 17
+      department: 3
+      cost-centers: 2
+      cost_centers: 2
+      business_units: 2
+      divisions: 2
+    providers_exposing: 21
+    providers_with_readable_schema: 13
+    operations:
+    - operation: GET collection
+      providers: 18
+      share: 0.857
+      tier: core
+    - operation: POST collection
+      providers: 10
+      share: 0.476
+      tier: extended
+    - operation: GET item
+      providers: 6
+      share: 0.286
+      tier: extended
+    - operation: UPDATE item
+      providers: 5
+      share: 0.238
+      tier: extended
+    - operation: UPDATE collection
+      providers: 4
+      share: 0.19
+      tier: long-tail
+    - operation: DELETE item
+      providers: 3
+      share: 0.143
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.048
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 10
+      share: 0.769
+      type: string
+      spellings:
+      - id
+      - remoteId
+      - remote_id
+      - uuid
+    - name: name
+      tier: core
+      providers: 10
+      share: 0.769
+      type: string
+      spellings:
+      - name
+    - name: parent_id
+      tier: extended
+      providers: 4
+      share: 0.308
+      type: string
+      spellings:
+      - parent
+      - parent_id
+      - parentId
+    - name: department_id
+      tier: extended
+      providers: 3
+      share: 0.231
+      type: string
+      spellings:
+      - departmentId
+      - department_id
+    - name: description
+      tier: extended
+      providers: 3
+      share: 0.231
+      type: string
+      spellings:
+      - description
+    - name: updated_at
+      tier: extended
+      providers: 3
+      share: 0.231
+      type: string
+      spellings:
+      - modified_at
+      - updated_at
+      - updated
+      - updatedAt
+    long_tail_count: 40
+    long_tail_sample:
+    - created_at
+    - metadata
+    - allocation_percentage
+    - archived_at
+    - branch
+    - code
+    - cost_center
+    - cost_center_id
+    - cost_center_name
+    - cost_center_number
+    - cost_centers_attributes
+    - deleted
+    - effective_date
+    - embedded
+    - employee_id
+    - expense_account
+    - expense_subaccount
+    - int_company_id
+    - int_opunit_type
+    - int_sort_order
+    - integration_id
+    - is_archived
+    - job_id
+    - last_modified_date_time
+    - level
+    - location_id
+    - manager_id
+    - mode
+    - owning_application
+    - public_id
+    - raw_data
+    - skip_webhook_notification
+    - sort_order
+    - str_address
+    - str_export_name
+    - str_opunit_name
+    - time_stamp
+    - type
+    - values
+    - version
+  team:
+    segments_seen:
+      teams: 7
+    providers_exposing: 7
+    providers_with_readable_schema: 5
+    operations:
+    - operation: GET collection
+      providers: 7
+      share: 1.0
+      tier: core
+    - operation: GET item
+      providers: 2
+      share: 0.286
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 4
+      share: 0.8
+      type: string
+      spellings:
+      - id
+      - remote_id
+    - name: name
+      tier: core
+      providers: 3
+      share: 0.6
+      type: string
+      spellings:
+      - name
+    long_tail_count: 17
+    long_tail_sample:
+    - archived_at
+    - changed_at
+    - created_at
+    - department_teams
+    - descriptor
+    - href
+    - integration_fields
+    - manager_ids
+    - member_ids
+    - metadata
+    - organization_id
+    - parent_id
+    - remote_data
+    - remote_deleted_at
+    - richtext_description
+    - type
+    - updated_at
+  position:
+    segments_seen:
+      positions: 12
+      job-titles: 1
+      job_titles: 1
+      jobtitles: 1
+    providers_exposing: 14
+    providers_with_readable_schema: 11
+    operations:
+    - operation: GET collection
+      providers: 14
+      share: 1.0
+      tier: core
+    - operation: GET item
+      providers: 9
+      share: 0.643
+      tier: core
+    - operation: UPDATE item
+      providers: 6
+      share: 0.429
+      tier: extended
+    - operation: POST collection
+      providers: 5
+      share: 0.357
+      tier: extended
+    - operation: DELETE item
+      providers: 3
+      share: 0.214
+      tier: extended
+    - operation: POST item
+      providers: 2
+      share: 0.143
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 11
+      share: 1.0
+      type: string
+      spellings:
+      - id
+      - positionId
+      - position_id
+      - positionID
+      - uuid
+    - name: name
+      tier: core
+      providers: 8
+      share: 0.727
+      type: string
+      spellings:
+      - name
+      - title
+    - name: location
+      tier: extended
+      providers: 5
+      share: 0.455
+      type: object
+      spellings:
+      - location
+    - name: is_active
+      tier: extended
+      providers: 4
+      share: 0.364
+      type: string
+      spellings:
+      - status
+    - name: code
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: string
+      spellings:
+      - code
+      - job_code
+    - name: employee_id
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: string
+      spellings:
+      - employee_id
+      - employee
+    long_tail_count: 83
+    long_tail_sample:
+    - color
+    - created_at
+    - created_by
+    - descriptor
+    - group_id
+    - is_filled
+    - job_profile
+    - location_id
+    - supervisory_organization
+    - worker
+    - access
+    - applicants
+    - applicants_count
+    - applicants_required
+    - ats_data
+    - available_date
+    - calibration_confirmed_at
+    - calibration_confirmed_by
+    - calibration_data
+    - category
+    - commence_date
+    - completed_at
+    - completion_date
+    - confidential
+    - cost_centers
+    - date
+    - description
+    - description_blocks
+    - digest_key
+    - employment_type
+    - end_time
+    - external_id
+    - followers
+    - group
+    - hiring_manager
+    - hiring_team
+    - hourly_rate
+    - ical
+    - internal_date
+    - is_available_for_recruit
+  work_location:
+    segments_seen:
+      locations: 16
+      location: 5
+      branches: 4
+      offices: 3
+      work-locations: 1
+      work_locations: 1
+      sites: 1
+    providers_exposing: 27
+    providers_with_readable_schema: 20
+    operations:
+    - operation: GET collection
+      providers: 26
+      share: 0.963
+      tier: core
+    - operation: GET item
+      providers: 14
+      share: 0.519
+      tier: core
+    - operation: POST collection
+      providers: 12
+      share: 0.444
+      tier: extended
+    - operation: UPDATE item
+      providers: 7
+      share: 0.259
+      tier: extended
+    - operation: DELETE item
+      providers: 5
+      share: 0.185
+      tier: long-tail
+    - operation: POST item
+      providers: 2
+      share: 0.074
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 16
+      share: 0.8
+      type: string
+      spellings:
+      - id
+      - remote_id
+      - uuid
+    - name: name
+      tier: core
+      providers: 15
+      share: 0.75
+      type: string
+      spellings:
+      - name
+      - title
+    - name: status
+      tier: core
+      providers: 10
+      share: 0.5
+      type: string
+      spellings:
+      - state
+      - status
+      - active
+      - isActive
+    - name: country
+      tier: extended
+      providers: 8
+      share: 0.4
+      type: string
+      spellings:
+      - country
+      - country_code
+    - name: address
+      tier: extended
+      providers: 7
+      share: 0.35
+      type: string
+      spellings:
+      - address
+      - street
+    - name: city
+      tier: extended
+      providers: 6
+      share: 0.3
+      type: string
+      spellings:
+      - city
+    - name: metadata
+      tier: extended
+      providers: 5
+      share: 0.25
+      type: array
+      spellings:
+      - custom_fields
+      - metadata
+    - name: type
+      tier: extended
+      providers: 4
+      share: 0.2
+      type: string
+      spellings:
+      - type
+    long_tail_count: 173
+    long_tail_sample:
+    - created_at
+    - updated_at
+    - description
+    - full_name
+    - latitude
+    - location_id
+    - longitude
+    - usages
+    - access
+    - account_number
+    - actions
+    - address_is_same_as_main
+    - addresses
+    - administrative_division
+    - analytics
+    - ancestry
+    - archived_at
+    - assembly_valid
+    - assigned_user
+    - assigned_warehouse
+    - baccount
+    - baccount_id
+    - building_name
+    - building_number
+    - can_activate_deactivate
+    - can_create_album
+    - can_create_event
+    - can_create_page
+    - can_edit
+    - can_mention
+    - can_upload_all_file_types
+    - category
+    - category_id
+    - category_name
+    - changed_at
+    - chatter_group_id
+    - code
+    - comment
+    - company_id
+    - contact
+  absence:
+    segments_seen:
+      absences: 9
+      leave_requests: 3
+      leave: 3
+      time-off: 2
+      time-off-requests: 1
+      leaves: 1
+      vacations: 1
+      leave-requests: 1
+    providers_exposing: 18
+    providers_with_readable_schema: 16
+    operations:
+    - operation: GET collection
+      providers: 17
+      share: 0.944
+      tier: core
+    - operation: POST collection
+      providers: 12
+      share: 0.667
+      tier: core
+    - operation: GET item
+      providers: 9
+      share: 0.5
+      tier: core
+    - operation: DELETE item
+      providers: 4
+      share: 0.222
+      tier: extended
+    - operation: UPDATE item
+      providers: 3
+      share: 0.167
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 1
+      share: 0.056
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.056
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.056
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 13
+      share: 0.812
+      type: string
+      spellings:
+      - id
+      - remote_id
+      - _id
+      - AbsenceId
+    - name: end_at
+      tier: core
+      providers: 11
+      share: 0.688
+      type: string
+      spellings:
+      - end_date
+      - end_time
+      - end
+      - EndDate
+      - endDate
+    - name: status
+      tier: core
+      providers: 11
+      share: 0.688
+      type: string
+      spellings:
+      - status
+      - Status
+    - name: employee_id
+      tier: core
+      providers: 10
+      share: 0.625
+      type: integer
+      spellings:
+      - employee_id
+      - employee
+      - employeeId
+      - Employee
+      - userId
+    - name: start_at
+      tier: core
+      providers: 10
+      share: 0.625
+      type: string
+      spellings:
+      - start_date
+      - start_time
+      - start
+      - StartDate
+      - startDate
+    - name: type
+      tier: core
+      providers: 10
+      share: 0.625
+      type: string
+      spellings:
+      - type
+      - leave_type
+      - request_type
+      - kind
+      - absenceType
+      - AbsenceType
+    - name: amount
+      tier: extended
+      providers: 5
+      share: 0.312
+      type: number
+      spellings:
+      - amount
+      - units
+      - hours
+      - duration
+      - Duration
+    - name: created_at
+      tier: extended
+      providers: 4
+      share: 0.25
+      type: string
+      spellings:
+      - created_at
+      - remote_created_at
+      - createdAt
+    long_tail_count: 103
+    long_tail_sample:
+    - updated_at
+    - absence_reason
+    - absence_type_id
+    - approver_id
+    - comments
+    - description
+    - employee_note
+    - absence_date
+    - absence_schedule_id
+    - absence_status
+    - action_overlapping_rosters
+    - activity_type
+    - actual_absence_duration
+    - api_key
+    - application_date
+    - application_end_date
+    - applied_leave_unit_type_description
+    - approval_comment
+    - approval_status
+    - approved_at
+    - approved_by_id
+    - attachment
+    - attachment_id
+    - available
+    - banner
+    - begin
+    - calendar_days
+    - can_cancel
+    - can_modify
+    - can_partially_edit
+    - certificate_number
+    - changed_at
+    - comment
+    - company_leave_type
+    - contribution_days
+    - date_end
+    - date_start
+    - day_percent
+    - days_count
+    - employee_attested
+  employment:
+    segments_seen:
+      jobs: 14
+      employments: 4
+      contracts: 4
+      employment: 1
+    providers_exposing: 19
+    providers_with_readable_schema: 14
+    operations:
+    - operation: GET collection
+      providers: 17
+      share: 0.895
+      tier: core
+    - operation: GET item
+      providers: 12
+      share: 0.632
+      tier: core
+    - operation: POST collection
+      providers: 9
+      share: 0.474
+      tier: extended
+    - operation: UPDATE item
+      providers: 5
+      share: 0.263
+      tier: extended
+    - operation: DELETE item
+      providers: 1
+      share: 0.053
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 12
+      share: 0.857
+      type: string
+      spellings:
+      - id
+      - remote_id
+      - remoteId
+    - name: status
+      tier: core
+      providers: 9
+      share: 0.643
+      type: string
+      spellings:
+      - status
+    - name: employment_type
+      tier: core
+      providers: 8
+      share: 0.571
+      type: string
+      spellings:
+      - type
+      - employment_type
+      - contract_type
+      - worker_type
+      - employmentType
+    - name: effective_date
+      tier: core
+      providers: 7
+      share: 0.5
+      type: string
+      spellings:
+      - effective_date
+      - start_date
+      - effectiveDate
+      - start
+      - startDate
+    - name: employee_id
+      tier: core
+      providers: 7
+      share: 0.5
+      type: string
+      spellings:
+      - employee
+      - employee_id
+      - employeeId
+    - name: job_title
+      tier: core
+      providers: 7
+      share: 0.5
+      type: string
+      spellings:
+      - title
+      - job_title
+      - role
+      - jobTitle
+    - name: created_at
+      tier: extended
+      providers: 6
+      share: 0.429
+      type: string
+      spellings:
+      - createdAt
+      - remote_created_at
+      - created_at
+    - name: metadata
+      tier: extended
+      providers: 6
+      share: 0.429
+      type: object
+      spellings:
+      - custom_fields
+      - attributes
+      - custom_attributes
+    - name: department_id
+      tier: extended
+      providers: 5
+      share: 0.357
+      type: string
+      spellings:
+      - department
+      - departmentId
+    - name: description
+      tier: extended
+      providers: 5
+      share: 0.357
+      type: string
+      spellings:
+      - description
+      - details
+    - name: pay_currency
+      tier: extended
+      providers: 5
+      share: 0.357
+      type: string
+      spellings:
+      - currency
+      - currency_code
+      - pay_currency
+      - salary_currency
+      - payCurrency
+    - name: location
+      tier: extended
+      providers: 4
+      share: 0.286
+      type: string
+      spellings:
+      - location
+    - name: pay_rate
+      tier: extended
+      providers: 4
+      share: 0.286
+      type: number
+      spellings:
+      - wage
+      - salary
+      - pay_rate
+      - payRate
+    - name: updated_at
+      tier: extended
+      providers: 3
+      share: 0.214
+      type: string
+      spellings:
+      - modified_at
+      - updated_at
+      - updatedAt
+    long_tail_count: 185
+    long_tail_sample:
+    - closed_at
+    - confidential
+    - cost_centers
+    - country
+    - division
+    - job_id
+    - job_type
+    - name
+    - opened_at
+    - pay_period
+    - relationships
+    - remote_updated_at
+    - weekly_hours
+    - admission_indicative
+    - admission_type
+    - applications_count
+    - approval_request_id
+    - approval_request_stringified
+    - approval_rule_id
+    - area_id
+    - base_wage
+    - boss
+    - category
+    - centro_costos_attributes
+    - changed_at
+    - citizenship
+    - client
+    - code
+    - company_id
+    - company_registration
+    - compensation_details
+    - contact_id
+    - contract_finishing_date_1
+    - contract_finishing_date_2
+    - contract_subscription_date
+    - contract_template
+    - contract_template_id
+    - contractual_detail
+    - contractual_detail_attributes
+    - contractual_stipulation

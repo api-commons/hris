@@ -1,0 +1,43 @@
+provider: rippling
+apis_io: https://apis.io/providers/rippling/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/rippling-openapi.yml#GET /platform/api/employees
+    - openapi/_original/rippling-openapi.yml#GET /platform/api/employees/{employee_id}
+  department:
+    path_segment:
+    - departments
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/rippling-openapi.yml#GET /platform/api/departments
+  team:
+    path_segment:
+    - teams
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/rippling-openapi.yml#GET /platform/api/teams
+  work_location:
+    path_segment:
+    - work_locations
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/rippling-openapi.yml#GET /platform/api/work_locations
+  absence:
+    path_segment:
+    - leave_requests
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/rippling-openapi.yml#GET /platform/api/leave_requests
+    - openapi/_original/rippling-openapi.yml#PATCH /platform/api/leave_requests/{leave_request_id}
+    - openapi/_original/rippling-openapi.yml#POST /platform/api/leave_requests

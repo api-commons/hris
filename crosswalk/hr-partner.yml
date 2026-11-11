@@ -1,0 +1,48 @@
+provider: hr-partner
+apis_io: https://apis.io/providers/hr-partner/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employee
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: last_name
+      status: employment_status
+      job_title: position
+      display_name: full_name
+      location_id: location
+      date_of_birth: date_of_birth
+      department_id: department
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/hr-partner-rest-api-openapi.yml#GET /employee/{employeeCode}
+    - openapi/_original/hr-partner-rest-api-openapi.yml#GET /employees
+    - openapi/_original/hr-partner-rest-api-openapi.yml#POST /employee/{employeeCode}
+  position:
+    path_segment:
+    - positions
+    properties:
+      id: id
+      employee_id: employee
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/hr-partner-rest-api-openapi.yml#GET /positions
+  absence:
+    path_segment:
+    - leave-requests
+    - absences
+    properties:
+      id: id
+      end_at: end_date
+      employee_id: employee
+      start_at: start_date
+      type: leave_type
+      amount: duration
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/hr-partner-rest-api-openapi.yml#GET /absences
+    - openapi/_original/hr-partner-rest-api-openapi.yml#GET /leave-requests

@@ -1,0 +1,62 @@
+provider: lucca
+apis_io: https://apis.io/providers/lucca/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id:
+      - id
+      - remoteId
+      work_email: email
+      last_name: familyName
+      first_name: givenName
+      status: status
+      employment_type: type
+      phone: phoneNumber
+      department_id: department
+      created_at: createdAt
+      employee_number: employeeNumber
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lucca-api-2024-11-01.json#GET /lucca-api/employees
+    - openapi/_original/lucca-api-2024-11-01.json#GET /lucca-api/employees/{id}
+    - openapi/_original/lucca-api-2024-11-01.json#PATCH /lucca-api/employees/{id}
+    - openapi/_original/lucca-api-2024-11-01.json#POST /lucca-api/employees
+  department:
+    path_segment:
+    - departments
+    properties:
+      id:
+      - id
+      - remoteId
+      name: name
+      parent_id: parent
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lucca-api-2024-11-01.json#GET /lucca-api/departments
+    - openapi/_original/lucca-api-2024-11-01.json#GET /lucca-api/departments/{id}
+    - openapi/_original/lucca-api-2024-11-01.json#PATCH /lucca-api/departments/{id}
+    - openapi/_original/lucca-api-2024-11-01.json#POST /lucca-api/departments
+  employment:
+    path_segment:
+    - employments
+    properties:
+      id:
+      - id
+      - remoteId
+      status: status
+      employment_type: type
+      effective_date: start
+      employee_id: employee
+      created_at: createdAt
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/lucca-api-2024-11-01.json#DELETE /lucca-api/employments/{id}
+    - openapi/_original/lucca-api-2024-11-01.json#GET /lucca-api/employments
+    - openapi/_original/lucca-api-2024-11-01.json#GET /lucca-api/employments/{id}
+    - openapi/_original/lucca-api-2024-11-01.json#PATCH /lucca-api/employments/{id}
+    - openapi/_original/lucca-api-2024-11-01.json#POST /lucca-api/employments

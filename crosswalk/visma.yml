@@ -1,0 +1,57 @@
+provider: visma
+apis_io: https://apis.io/providers/visma/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    - employee
+    properties:
+      id: Id
+      last_name: LastName
+      first_name: FirstName
+      status:
+      - status
+      - State
+      employment_type: Type
+      employee_id: employeeId
+      metadata: metadata
+      department_id: department
+      employee_number:
+      - employeeNumber
+      - EmployeeNumber
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#GET /v1/employee
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#GET /v1/employee/{employeeCd}
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#POST /v1/employee
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#PUT /v1/employee/{employeeCd}
+    - openapi/_original/visma-net-erp-service-api-openapi-original.json#GET /v1/employee
+  department:
+    path_segment:
+    - department
+    properties:
+      department_id: departmentId
+      description: description
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#GET /v1/department
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#GET /v1/department/{departmentId}
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#POST /v1/department
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#PUT /v1/department/{departmentId}
+    - openapi/_original/visma-net-erp-service-api-openapi-original.json#GET /v1/department
+  work_location:
+    path_segment:
+    - location
+    properties:
+      status: active
+      address: address
+      metadata: metadata
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#GET /v1/location
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#GET /v1/location/{bAccountId}
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#POST /v1/location
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#POST /v1/warehouse/{warehouseID}/location
+    - openapi/_original/visma-net-erp-interactive-api-openapi-original.json#PUT /v1/warehouse/{warehouseID}/location/{locationID}

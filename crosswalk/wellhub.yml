@@ -1,0 +1,27 @@
+provider: wellhub
+apis_io: https://apis.io/providers/wellhub/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      display_name: full_name
+      employee_id: employee_id
+      department_id: department
+      employee_number: payroll_id
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/wellhub-integrations-openapi-original.json#GET /v1/companies/{company-tax-id}/employees
+    - openapi/_original/wellhub-integrations-openapi-original.json#GET /v1/employees
+  employment:
+    path_segment:
+    - jobs
+    properties:
+      id: id
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/wellhub-integrations-openapi-original.json#POST /v1/eligibility/jobs

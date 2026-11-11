@@ -1,0 +1,25 @@
+provider: kota
+apis_io: https://apis.io/providers/kota/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: last_name
+      first_name: first_name
+      status: status
+      date_of_birth: date_of_birth
+      phone: phone_number
+      employee_id: employee_id
+      metadata: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kota-api-reference-openapi.json#GET /employees
+    - openapi/_original/kota-api-reference-openapi.json#GET /employees/{employee_id}
+    - openapi/_original/kota-api-reference-openapi.json#GET /groups/{group_id}/employees
+    - openapi/_original/kota-api-reference-openapi.json#POST /employees
+    - openapi/_original/kota-api-reference-openapi.json#POST /groups/{group_id}/employees

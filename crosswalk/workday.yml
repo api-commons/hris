@@ -1,0 +1,69 @@
+provider: workday
+apis_io: https://apis.io/providers/workday/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - workers
+    - people
+    properties:
+      id: id
+      hire_date: hireDate
+      employment_type: workerType
+      job_title: position
+      display_name: preferredName
+      location_id: location
+      date_of_birth: dateOfBirth
+      employee_id: workerID
+      gender: gender
+      termination_date: terminationDate
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/hcm.yml#GET /workers
+    - openapi/_original/hcm.yml#GET /workers/{ID}
+    - openapi/_original/person.yml#GET /people
+    - openapi/_original/person.yml#GET /people/{ID}
+    - openapi/_original/workday-advanced-compensation-compensation-rest-v3-openapi.json#GET /workers
+  team:
+    path_segment:
+    - teams
+    properties:
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/workday-integration-flex-team-openapi.yml#GET /teams
+    - openapi/_original/workday-integration-flex-team-openapi.yml#GET /teams/{ID}
+  position:
+    path_segment:
+    - positions
+    properties:
+      id:
+      - id
+      - positionID
+      location: location
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/staffing.yml#GET /positions
+    - openapi/_original/staffing.yml#GET /positions/{ID}
+    - openapi/_original/workday-integration-staffing-openapi.yml#GET /positions
+    - openapi/_original/workday-integration-staffing-openapi.yml#GET /positions/{ID}
+  work_location:
+    path_segment:
+    - locations
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/hcm.yml#GET /locations
+    - openapi/_original/hcm.yml#GET /locations/{ID}
+  employment:
+    path_segment:
+    - contracts
+    properties:
+      id: id
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/workday-integration-revenue-management-openapi.yml#GET /contracts
+    - openapi/_original/workday-integration-revenue-management-openapi.yml#GET /contracts/{ID}

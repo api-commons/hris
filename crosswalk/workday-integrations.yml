@@ -1,0 +1,28 @@
+provider: workday-integrations
+apis_io: https://apis.io/providers/workday-integrations/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - workers
+    properties:
+      id: id
+      employment_type: workerType
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/workday-integrations-rest-api-openapi.yml#GET /organizations/{organizationId}/workers
+    - openapi/_original/workday-integrations-rest-api-openapi.yml#GET /workers
+    - openapi/_original/workday-integrations-rest-api-openapi.yml#GET /workers/{workerId}
+  position:
+    path_segment:
+    - positions
+    properties:
+      id:
+      - id
+      - positionId
+      location: location
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/workday-integrations-rest-api-openapi.yml#GET /positions
+    - openapi/_original/workday-integrations-rest-api-openapi.yml#GET /positions/{positionId}

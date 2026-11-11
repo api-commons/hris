@@ -1,0 +1,28 @@
+provider: dailypay
+apis_io: https://apis.io/providers/dailypay/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - people
+    properties:
+      id: id
+      employment_type: type
+      metadata: attributes
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/dailypay-rest-openapi-original.yml#GET /rest/people/{person_id}
+    - openapi/_original/dailypay-rest-openapi-original.yml#PATCH /rest/people/{person_id}
+  employment:
+    path_segment:
+    - jobs
+    properties:
+      id: id
+      employment_type: type
+      metadata: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/dailypay-rest-openapi-original.yml#GET /rest/jobs
+    - openapi/_original/dailypay-rest-openapi-original.yml#GET /rest/jobs/{job_id}
+    - openapi/_original/dailypay-rest-openapi-original.yml#PATCH /rest/jobs/{job_id}

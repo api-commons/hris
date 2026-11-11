@@ -1,0 +1,74 @@
+provider: harri
+apis_io: https://apis.io/providers/harri/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: last_name
+      first_name: first_name
+      status: status
+      hire_date: hire_date
+      job_title:
+      - position
+      - title
+      location_id: location_id
+      date_of_birth: birth_date
+      phone: phone
+      employee_id: user_id
+      employee_number: payroll_id
+      gender: gender
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/harri-employee-openapi.yml#GET /api/v1/employees
+    - openapi/_original/harri-employee-openapi.yml#GET /api/v1/employees/{employeeId}
+    - openapi/_original/harri-employee-openapi.yml#GET /api/v1/franchisees/{franchiseeId}/employees
+    - openapi/_original/harri-employee-openapi.yml#GET /api/v1/franchisees/{franchiseeId}/employees/{employeeId}
+    - openapi/_original/harri-employee-openapi.yml#GET /api/v2/employees
+  department:
+    path_segment:
+    - cost_centers
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/harri-employee-openapi.yml#GET /api/v1/franchisees/{franchiseeId}/locations/{location_id}/cost_centers
+    - openapi/_original/harri-employee-openapi.yml#GET /api/v1/locations/{location_id}/cost_centers
+  position:
+    path_segment:
+    - positions
+    - job_titles
+    properties:
+      id: id
+      name: name
+      is_active: status
+      code: code
+      employee_id: employee_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/harri-employee-openapi.yml#DELETE /api/v1/employees/{employeeId}/job_titles/{jobTitleId}
+    - openapi/_original/harri-employee-openapi.yml#DELETE /api/v1/employees/{employeeId}/locations/{locationId}/positions/{positionCode}
+    - openapi/_original/harri-employee-openapi.yml#DELETE /api/v1/employees/{employeeId}/positions/{positionCode}
+    - openapi/_original/harri-employee-openapi.yml#DELETE /api/v1/franchisees/{franchiseeId}/employees/{employeeId}/job_titles/{jobTitleId}
+    - openapi/_original/harri-employee-openapi.yml#DELETE /api/v1/franchisees/{franchiseeId}/employees/{employeeId}/locations/{locationId}/positions/{positionCode}
+  work_location:
+    path_segment:
+    - locations
+    properties:
+      id: id
+      name: name
+      country: country_code
+      city: city
+      type: type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/harri-employee-openapi.yml#DELETE /api/v1/employees/{employeeId}/locations/{locationId}
+    - openapi/_original/harri-employee-openapi.yml#DELETE /api/v1/franchisees/{franchiseeId}/employees/{employeeId}/locations/{locationId}
+    - openapi/_original/harri-employee-openapi.yml#DELETE /api/v2/employees/{employeeId}/locations/{locationId}
+    - openapi/_original/harri-employee-openapi.yml#DELETE /api/v2/franchisees/{franchiseeId}/employees/{employeeId}/locations/{locationId}
+    - openapi/_original/harri-employee-openapi.yml#GET /api/v1/franchisees/{franchiseeId}/locations

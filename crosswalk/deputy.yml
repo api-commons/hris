@@ -1,0 +1,43 @@
+provider: deputy
+apis_io: https://apis.io/providers/deputy/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employee
+    properties:
+      phone: Phone
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/deputy-deputy-openapi.yml#GET /v1/resource/Employee/{employeeid}
+    - openapi/_original/deputy-deputy-openapi.yml#GET /v1/supervise/employee
+    - openapi/_original/deputy-deputy-openapi.yml#GET /v1/supervise/employee/{employeeid}
+    - openapi/_original/deputy-deputy-openapi.yml#POST /v1/supervise/employee
+    - openapi/_original/deputy-deputy-openapi.yml#POST /v1/supervise/employee/{id}
+  department:
+    path_segment:
+    - department
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/deputy-deputy-openapi.yml#PUT /v1/supervise/department
+  work_location:
+    path_segment:
+    - location
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/deputy-deputy-openapi.yml#GET /v1/my/location
+    - openapi/_original/deputy-deputy-openapi.yml#GET /v1/my/location/{id}
+  absence:
+    path_segment:
+    - leave
+    properties:
+      status: Status
+      employee_id: Employee
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/deputy-deputy-openapi.yml#GET /v1/my/leave
+    - openapi/_original/deputy-deputy-openapi.yml#GET /v1/supervise/leave/{employeeid}
+    - openapi/_original/deputy-deputy-openapi.yml#POST /v1/supervise/leave

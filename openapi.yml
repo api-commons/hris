@@ -1,0 +1,585 @@
+openapi: 3.1.0
+info:
+  title: People and HR (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common People and HR interface, distilled from the harvested OpenAPI of 171 providers in the
+    APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
+    so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /employees:
+    get:
+      operationId: listEmployees
+      summary: List employees
+      tags:
+      - Employees
+      x-commons-tier: core
+      x-commons-share: 0.951
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/Employee'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createEmployee
+      summary: Create an employee
+      tags:
+      - Employees
+      x-commons-tier: core
+      x-commons-share: 0.672
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /employees/{employee_id}:
+    parameters:
+    - $ref: '#/components/parameters/employee_id'
+    get:
+      operationId: getEmployee
+      summary: Get an employee
+      tags:
+      - Employees
+      x-commons-tier: core
+      x-commons-share: 0.869
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateEmployee
+      summary: Update an employee
+      tags:
+      - Employees
+      x-commons-tier: core
+      x-commons-share: 0.574
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+    delete:
+      operationId: deleteEmployee
+      summary: Delete an employee
+      tags:
+      - Employees
+      x-commons-tier: extended
+      x-commons-share: 0.246
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+  /departments:
+    get:
+      operationId: listDepartments
+      summary: List departments
+      tags:
+      - Departments
+      x-commons-tier: core
+      x-commons-share: 0.857
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/Department'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createDepartment
+      summary: Create a department
+      tags:
+      - Departments
+      x-commons-tier: extended
+      x-commons-share: 0.476
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /departments/{department_id}:
+    parameters:
+    - $ref: '#/components/parameters/department_id'
+    get:
+      operationId: getDepartment
+      summary: Get a department
+      tags:
+      - Departments
+      x-commons-tier: extended
+      x-commons-share: 0.286
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    patch:
+      operationId: updateDepartment
+      summary: Update a department
+      tags:
+      - Departments
+      x-commons-tier: extended
+      x-commons-share: 0.238
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /teams:
+    get:
+      operationId: listTeams
+      summary: List teams
+      tags:
+      - Teams
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Team'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /positions:
+    get:
+      operationId: listPositions
+      summary: List positions
+      tags:
+      - Positions
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/Position'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createPosition
+      summary: Create a position
+      tags:
+      - Positions
+      x-commons-tier: extended
+      x-commons-share: 0.357
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /positions/{position_id}:
+    parameters:
+    - $ref: '#/components/parameters/position_id'
+    get:
+      operationId: getPosition
+      summary: Get a position
+      tags:
+      - Positions
+      x-commons-tier: core
+      x-commons-share: 0.643
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    patch:
+      operationId: updatePosition
+      summary: Update a position
+      tags:
+      - Positions
+      x-commons-tier: extended
+      x-commons-share: 0.429
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+    delete:
+      operationId: deletePosition
+      summary: Delete a position
+      tags:
+      - Positions
+      x-commons-tier: extended
+      x-commons-share: 0.214
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+  /work-locations:
+    get:
+      operationId: listWorkLocations
+      summary: List work locations
+      tags:
+      - Work Locations
+      x-commons-tier: core
+      x-commons-share: 0.963
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id004
+                  $ref: '#/components/schemas/WorkLocation'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createWorkLocation
+      summary: Create a work location
+      tags:
+      - Work Locations
+      x-commons-tier: extended
+      x-commons-share: 0.444
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /work-locations/{work_location_id}:
+    parameters:
+    - $ref: '#/components/parameters/work_location_id'
+    get:
+      operationId: getWorkLocation
+      summary: Get a work location
+      tags:
+      - Work Locations
+      x-commons-tier: core
+      x-commons-share: 0.519
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    patch:
+      operationId: updateWorkLocation
+      summary: Update a work location
+      tags:
+      - Work Locations
+      x-commons-tier: extended
+      x-commons-share: 0.259
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /absences:
+    get:
+      operationId: listAbsences
+      summary: List absences
+      tags:
+      - Absences
+      x-commons-tier: core
+      x-commons-share: 0.944
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id005
+                  $ref: '#/components/schemas/Absence'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createAbsence
+      summary: Create an absence
+      tags:
+      - Absences
+      x-commons-tier: core
+      x-commons-share: 0.667
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /absences/{absence_id}:
+    parameters:
+    - $ref: '#/components/parameters/absence_id'
+    get:
+      operationId: getAbsence
+      summary: Get an absence
+      tags:
+      - Absences
+      x-commons-tier: core
+      x-commons-share: 0.5
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    delete:
+      operationId: deleteAbsence
+      summary: Delete an absence
+      tags:
+      - Absences
+      x-commons-tier: extended
+      x-commons-share: 0.222
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+  /employments:
+    get:
+      operationId: listEmployments
+      summary: List employments
+      tags:
+      - Employments
+      x-commons-tier: core
+      x-commons-share: 0.895
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id006
+                  $ref: '#/components/schemas/Employment'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createEmployment
+      summary: Create an employment
+      tags:
+      - Employments
+      x-commons-tier: extended
+      x-commons-share: 0.474
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+  /employments/{employment_id}:
+    parameters:
+    - $ref: '#/components/parameters/employment_id'
+    get:
+      operationId: getEmployment
+      summary: Get an employment
+      tags:
+      - Employments
+      x-commons-tier: core
+      x-commons-share: 0.632
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+    patch:
+      operationId: updateEmployment
+      summary: Update an employment
+      tags:
+      - Employments
+      x-commons-tier: extended
+      x-commons-share: 0.263
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+components:
+  schemas:
+    Employee:
+      $ref: ./schema/employee.json
+    Department:
+      $ref: ./schema/department.json
+    Team:
+      $ref: ./schema/team.json
+    Position:
+      $ref: ./schema/position.json
+    WorkLocation:
+      $ref: ./schema/work_location.json
+    Absence:
+      $ref: ./schema/absence.json
+    Employment:
+      $ref: ./schema/employment.json
+  parameters:
+    employee_id:
+      name: employee_id
+      in: path
+      required: true
+      schema:
+        type: string
+    department_id:
+      name: department_id
+      in: path
+      required: true
+      schema:
+        type: string
+    team_id:
+      name: team_id
+      in: path
+      required: true
+      schema:
+        type: string
+    position_id:
+      name: position_id
+      in: path
+      required: true
+      schema:
+        type: string
+    work_location_id:
+      name: work_location_id
+      in: path
+      required: true
+      schema:
+        type: string
+    absence_id:
+      name: absence_id
+      in: path
+      required: true
+      schema:
+        type: string
+    employment_id:
+      name: employment_id
+      in: path
+      required: true
+      schema:
+        type: string

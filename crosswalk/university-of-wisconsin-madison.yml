@@ -1,0 +1,42 @@
+provider: university-of-wisconsin-madison
+apis_io: https://apis.io/providers/university-of-wisconsin-madison/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - people
+    properties:
+      id: id
+      employment_type: type
+      metadata: attributes
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/university-of-wisconsin-madison-mock-person-api-certificates-openapi.yml#GET /people
+    - openapi/_original/university-of-wisconsin-madison-mock-person-api-certificates-openapi.yml#GET /people/{id}
+    - openapi/_original/university-of-wisconsin-madison-mock-person-api-openapi.yml#GET /people
+    - openapi/_original/university-of-wisconsin-madison-mock-person-api-openapi.yml#GET /people/{id}
+    - openapi/_original/university-of-wisconsin-madison-person-api-openapi.yml#GET /people
+  work_location:
+    path_segment:
+    - locations
+    properties:
+      status: active
+      type: type
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/university-of-wisconsin-madison-locations-api-openapi.yml#GET /locations
+  employment:
+    path_segment:
+    - jobs
+    properties:
+      id: id
+      employment_type: type
+      metadata: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/university-of-wisconsin-madison-mock-person-api-certificates-openapi.yml#GET /people/{id}/jobs
+    - openapi/_original/university-of-wisconsin-madison-mock-person-api-openapi.yml#GET /people/{id}/jobs
+    - openapi/_original/university-of-wisconsin-madison-mock-person-api-openapi.yml#GET /people/{id}/jobs/{jobId}
+    - openapi/_original/university-of-wisconsin-madison-person-api-openapi.yml#GET /people/{id}/jobs
+    - openapi/_original/university-of-wisconsin-madison-person-api-openapi.yml#GET /people/{id}/jobs/{jobId}

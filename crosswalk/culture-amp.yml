@@ -1,0 +1,21 @@
+provider: culture-amp
+apis_io: https://apis.io/providers/culture-amp/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      hire_date: startDate
+      display_name:
+      - name
+      - preferredName
+      date_of_birth: birthDate
+      termination_date: endDate
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/culture-amp-public-api-openapi.yml#GET /employees
+    - openapi/_original/culture-amp-public-api-openapi.yml#GET /employees/{id}

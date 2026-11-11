@@ -1,0 +1,58 @@
+provider: oracle-fusion
+apis_io: https://apis.io/providers/oracle-fusion/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - persons
+    - workers
+    properties:
+      work_email:
+      - Email
+      - WorkEmail
+      last_name: LastName
+      first_name: FirstName
+      hire_date: HireDate
+      employment_type: WorkerType
+      display_name: DisplayName
+      date_of_birth: DateOfBirth
+      phone: PhoneNumber
+      employee_id: PersonId
+      created_at: CreationDate
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/oracle-fusion-common-openapi.yml#DELETE /fscmRestApi/resources/11.13.18.05/persons/{Personid}
+    - openapi/_original/oracle-fusion-common-openapi.yml#GET /fscmRestApi/resources/11.13.18.05/persons
+    - openapi/_original/oracle-fusion-common-openapi.yml#GET /fscmRestApi/resources/11.13.18.05/persons/{Personid}
+    - openapi/_original/oracle-fusion-common-openapi.yml#PATCH /fscmRestApi/resources/11.13.18.05/persons/{Personid}
+    - openapi/_original/oracle-fusion-common-openapi.yml#POST /fscmRestApi/resources/11.13.18.05/persons
+  absence:
+    path_segment:
+    - absences
+    properties:
+      id: AbsenceId
+      end_at: EndDate
+      start_at: StartDate
+      type: AbsenceType
+      amount: Duration
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/oracle-fusion-hcm-openapi.yml#DELETE /hcmRestApi/resources/11.13.18.05/absences/{AbsenceId}
+    - openapi/_original/oracle-fusion-hcm-openapi.yml#GET /hcmRestApi/resources/11.13.18.05/absences
+    - openapi/_original/oracle-fusion-hcm-openapi.yml#GET /hcmRestApi/resources/11.13.18.05/absences/{AbsenceId}
+    - openapi/_original/oracle-fusion-hcm-openapi.yml#PATCH /hcmRestApi/resources/11.13.18.05/absences/{AbsenceId}
+    - openapi/_original/oracle-fusion-hcm-openapi.yml#POST /hcmRestApi/resources/11.13.18.05/absences
+  employment:
+    path_segment:
+    - jobs
+    properties:
+      status: status
+      description:
+      - description
+      - details
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/oracle-fusion-epm-openapi.yml#GET /HyperionPlanning/rest/v3/applications/{applicationName}/jobs
+    - openapi/_original/oracle-fusion-epm-openapi.yml#GET /HyperionPlanning/rest/v3/applications/{applicationName}/jobs/{jobId}
+    - openapi/_original/oracle-fusion-epm-openapi.yml#POST /HyperionPlanning/rest/v3/applications/{applicationName}/jobs

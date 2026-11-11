@@ -1,0 +1,69 @@
+provider: truto
+apis_io: https://apis.io/providers/truto/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id:
+      - id
+      - remoteId
+      work_email: email
+      last_name: lastName
+      first_name: firstName
+      status: status
+      hire_date: hireDate
+      employment_type: employmentType
+      job_title: jobTitle
+      display_name: displayName
+      location_id: location
+      phone: phone
+      department_id: departmentId
+      created_at: createdAt
+      manager_id: managerId
+      termination_date: terminationDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/truto-unified-hris-openapi.yml#GET /employees
+    - openapi/_original/truto-unified-hris-openapi.yml#GET /employees/{id}
+  department:
+    path_segment:
+    - departments
+    properties:
+      id:
+      - id
+      - remoteId
+      name: name
+      parent_id: parentId
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/truto-unified-ats-openapi.yml#GET /departments
+  employment:
+    path_segment:
+    - jobs
+    - employments
+    properties:
+      id:
+      - id
+      - remoteId
+      status: status
+      employment_type: employmentType
+      effective_date: effectiveDate
+      employee_id: employeeId
+      job_title:
+      - title
+      - jobTitle
+      created_at: createdAt
+      department_id: departmentId
+      description: description
+      pay_currency: payCurrency
+      pay_rate: payRate
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/truto-unified-ats-openapi.yml#GET /jobs
+    - openapi/_original/truto-unified-ats-openapi.yml#GET /jobs/{id}
+    - openapi/_original/truto-unified-hris-openapi.yml#GET /employments

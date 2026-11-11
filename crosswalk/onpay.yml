@@ -1,0 +1,77 @@
+provider: onpay
+apis_io: https://apis.io/providers/onpay/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: last_name
+      first_name: first_name
+      status:
+      - state
+      - employment_status
+      hire_date: hire_date
+      employment_type: type
+      location_id: location_id
+      date_of_birth: birthday
+      employee_id: employee_id
+      department_id: department_id
+      employee_number: employee_number
+      gender: gender
+      manager_id: manager_id
+      termination_date: termination_date
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/onpay-api-openapi.json#GET /employees
+    - openapi/_original/onpay-api-openapi.json#GET /employees/{employee_id}
+    - openapi/_original/onpay-api-openapi.json#PATCH /employees/{employee_id}
+    - openapi/_original/onpay-api-openapi.json#POST /employees
+  department:
+    path_segment:
+    - departments
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/onpay-api-openapi.json#GET /company/departments
+    - openapi/_original/onpay-api-openapi.json#GET /company/departments/{id}
+    - openapi/_original/onpay-api-openapi.json#PATCH /company/departments/{id}
+    - openapi/_original/onpay-api-openapi.json#POST /company/departments
+  position:
+    path_segment:
+    - positions
+    properties:
+      id: id
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/onpay-api-openapi.json#GET /company/positions
+    - openapi/_original/onpay-api-openapi.json#GET /company/positions/{id}
+    - openapi/_original/onpay-api-openapi.json#PATCH /company/positions/{id}
+    - openapi/_original/onpay-api-openapi.json#POST /company/positions
+  work_location:
+    path_segment:
+    - locations
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/onpay-api-openapi.json#GET /company/locations
+    - openapi/_original/onpay-api-openapi.json#GET /company/locations/{id}
+    - openapi/_original/onpay-api-openapi.json#PATCH /company/locations/{id}
+    - openapi/_original/onpay-api-openapi.json#POST /company/locations
+  absence:
+    path_segment:
+    - leave
+    properties:
+      id: id
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/onpay-api-openapi.json#GET /employees/{employee_id}/leave
+    - openapi/_original/onpay-api-openapi.json#PATCH /employees/{employee_id}/leave

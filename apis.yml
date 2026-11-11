@@ -1,0 +1,63 @@
+aid: common-hris
+name: People and HR
+type: Common
+description: 'The common People and HR vocabulary, distilled from the harvested OpenAPI of 171 providers in APIs.io:
+  shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names to each
+  provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Human Resources
+- HRIS
+- HR Tech
+- HR
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/hris/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-hris:hris
+  name: Common People and HR Interface
+  description: The People and HR interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/hris
+  tags:
+  - Human Resources
+  - HRIS
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/hris/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/hris/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/hris/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: employee
+    url: https://raw.githubusercontent.com/api-commons/hris/main/schema/employee.json
+  - type: JSONSchema
+    name: department
+    url: https://raw.githubusercontent.com/api-commons/hris/main/schema/department.json
+  - type: JSONSchema
+    name: team
+    url: https://raw.githubusercontent.com/api-commons/hris/main/schema/team.json
+  - type: JSONSchema
+    name: position
+    url: https://raw.githubusercontent.com/api-commons/hris/main/schema/position.json
+  - type: JSONSchema
+    name: work_location
+    url: https://raw.githubusercontent.com/api-commons/hris/main/schema/work_location.json
+  - type: JSONSchema
+    name: absence
+    url: https://raw.githubusercontent.com/api-commons/hris/main/schema/absence.json
+  - type: JSONSchema
+    name: employment
+    url: https://raw.githubusercontent.com/api-commons/hris/main/schema/employment.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/hris/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

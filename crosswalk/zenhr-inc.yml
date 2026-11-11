@@ -1,0 +1,48 @@
+provider: zenhr-inc
+apis_io: https://apis.io/providers/zenhr-inc/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    - employee
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/zenhr-inc-openapi.yml#GET /branches/{branch_id}/employees
+    - openapi/_original/zenhr-inc-openapi.yml#GET /branches/{branch_id}/employees/{employee_id}
+    - openapi/_original/zenhr-inc-openapi.yml#GET /branches/{branch_id}/integration_maps/employee/{global_id}
+    - openapi/_original/zenhr-inc-openapi.yml#PATCH /branches/{branch_id}/employees/{employee_id}
+    - openapi/_original/zenhr-inc-openapi.yml#PATCH /branches/{branch_id}/integration_maps/employee/{global_id}
+  department:
+    path_segment:
+    - departments
+    - business_units
+    - divisions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/zenhr-inc-openapi.yml#DELETE /branches/{branch_id}/business_units/{business_unit_id}
+    - openapi/_original/zenhr-inc-openapi.yml#DELETE /branches/{branch_id}/departments/{department_id}
+    - openapi/_original/zenhr-inc-openapi.yml#DELETE /branches/{branch_id}/divisions/{division_id}
+    - openapi/_original/zenhr-inc-openapi.yml#GET /branches/{branch_id}/business_units
+    - openapi/_original/zenhr-inc-openapi.yml#GET /branches/{branch_id}/business_units/{business_unit_id}
+  position:
+    path_segment:
+    - positions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/zenhr-inc-openapi.yml#GET /branches/{branch_id}/positions
+    - openapi/_original/zenhr-inc-openapi.yml#GET /branches/{branch_id}/positions/{position_id}
+    - openapi/_original/zenhr-inc-openapi.yml#PATCH /branches/{branch_id}/positions/{position_id}
+    - openapi/_original/zenhr-inc-openapi.yml#POST /branches/{branch_id}/positions
+  work_location:
+    path_segment:
+    - branches
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/zenhr-inc-openapi.yml#GET /branches
+    - openapi/_original/zenhr-inc-openapi.yml#GET /branches/{branch_id}

@@ -1,0 +1,51 @@
+provider: sesame-hr
+apis_io: https://apis.io/providers/sesame-hr/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: lastName
+      first_name: firstName
+      status: status
+      phone: phone
+      created_at: createdAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sesame-hr-openapi.yml#DELETE /employees/{id}
+    - openapi/_original/sesame-hr-openapi.yml#GET /employees
+    - openapi/_original/sesame-hr-openapi.yml#GET /employees/{id}
+    - openapi/_original/sesame-hr-openapi.yml#PATCH /employees/{id}
+    - openapi/_original/sesame-hr-openapi.yml#POST /employees
+  department:
+    path_segment:
+    - departments
+    properties:
+      id: id
+      name: name
+      department_id: departmentId
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sesame-hr-openapi.yml#DELETE /departments/{id}
+    - openapi/_original/sesame-hr-openapi.yml#GET /departments
+    - openapi/_original/sesame-hr-openapi.yml#GET /employees/{id}/departments
+    - openapi/_original/sesame-hr-openapi.yml#PATCH /departments/{id}
+    - openapi/_original/sesame-hr-openapi.yml#POST /departments
+  work_location:
+    path_segment:
+    - offices
+    properties:
+      id: id
+      name: name
+      country: country
+      address: address
+      city: city
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/sesame-hr-openapi.yml#GET /offices
+    - openapi/_original/sesame-hr-openapi.yml#POST /offices

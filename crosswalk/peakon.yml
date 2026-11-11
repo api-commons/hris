@@ -1,0 +1,19 @@
+provider: peakon
+apis_io: https://apis.io/providers/peakon/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      employment_type: type
+      metadata: attributes
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/peakon-openapi-original.json#DELETE /employees/{employeeId}
+    - openapi/_original/peakon-openapi-original.json#GET /employees
+    - openapi/_original/peakon-openapi-original.json#GET /employees/{employeeId}
+    - openapi/_original/peakon-openapi-original.json#PATCH /employees/{employeeId}
+    - openapi/_original/peakon-openapi-original.json#POST /employees

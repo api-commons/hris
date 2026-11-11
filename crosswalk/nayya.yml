@@ -1,0 +1,31 @@
+provider: nayya
+apis_io: https://apis.io/providers/nayya/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: lastName
+      first_name: firstName
+      status:
+      - state
+      - employmentStatus
+      hire_date: startDate
+      employment_type: employmentType
+      date_of_birth: dateOfBirth
+      phone: phoneNumber
+      employee_id: employeeId
+      metadata: customAttributes
+      created_at: createdAt
+      gender: gender
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/nayya-accounts-openapi.json#DELETE /employers/{employerId}/employees/{employeeId}
+    - openapi/_original/nayya-accounts-openapi.json#GET /employers/{employerId}/employees
+    - openapi/_original/nayya-accounts-openapi.json#GET /employers/{employerId}/employees/{employeeId}
+    - openapi/_original/nayya-accounts-openapi.json#PATCH /employers/{employerId}/employees/{employeeId}
+    - openapi/_original/nayya-accounts-openapi.json#POST /employers/{employerId}/employees

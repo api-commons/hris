@@ -1,0 +1,28 @@
+provider: zeal-hq
+apis_io: https://apis.io/providers/zeal-hq/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: last_name
+      first_name: first_name
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/zeal-hq-openapi.yml#GET /employees
+    - openapi/_original/zeal-hq-openapi.yml#POST /employees
+    - openapi/_original/zeal-hq-openapi.yml#PUT /employees
+  work_location:
+    path_segment:
+    - location
+    properties:
+      id: id
+      status: state
+      address: address
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/zeal-hq-openapi.yml#POST /taxes/location

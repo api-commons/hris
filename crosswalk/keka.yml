@@ -1,0 +1,42 @@
+provider: keka
+apis_io: https://apis.io/providers/keka/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/keka-hr-api-openapi.yaml#GET /api/v1/hris/employees
+    - openapi/_original/keka-hr-api-openapi.yaml#GET /api/v1/hris/employees/{id}
+    - openapi/_original/keka-hr-api-openapi.yaml#POST /api/v1/hris/employees
+  department:
+    path_segment:
+    - departments
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/keka-hr-api-openapi.yaml#GET /api/v1/hris/departments
+  position:
+    path_segment:
+    - jobtitles
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/keka-hr-api-openapi.yaml#GET /api/v1/hris/jobtitles
+  work_location:
+    path_segment:
+    - locations
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/keka-hr-api-openapi.yaml#GET /api/v1/hris/locations
+  employment:
+    path_segment:
+    - jobs
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/keka-hr-api-openapi.yaml#GET /api/v1/hire/jobs

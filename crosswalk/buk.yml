@@ -1,0 +1,102 @@
+provider: buk
+apis_io: https://apis.io/providers/buk/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    - people
+    properties:
+      id: id
+      work_email: email
+      last_name:
+      - surname
+      - last_name
+      first_name: first_name
+      status:
+      - status
+      - active
+      hire_date: start_date
+      display_name: full_name
+      location_id: location_id
+      date_of_birth: birthday
+      phone: phone
+      employee_id: person_id
+      metadata: custom_attributes
+      created_at: created_at
+      gender: gender
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#GET /employees
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#GET /employees/{id}
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#GET /people/{id}
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#PATCH /employees/{id}
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#POST /employees
+  department:
+    path_segment:
+    - cost_centers
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#PATCH /employees/{employee_id}/jobs/{job_id}/cost_centers
+    - openapi/_original/buk-data-access-api-brasil-openapi.yml#PATCH /employees/{employee_id}/jobs/{job_id}/cost_centers
+    - openapi/_original/buk-data-access-api-chile-openapi.json#PATCH /employees/{employee_id}/jobs/{job_id}/cost_centers
+    - openapi/_original/buk-data-access-api-chile-openapi.yml#PATCH /employees/{employee_id}/jobs/{job_id}/cost_centers
+    - openapi/_original/buk-data-access-api-colombia-openapi.json#PATCH /employees/{employee_id}/jobs/{job_id}/cost_centers
+  work_location:
+    path_segment:
+    - locations
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#GET /locations
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#GET /locations/{id}
+    - openapi/_original/buk-data-access-api-brasil-openapi.yml#GET /locations
+    - openapi/_original/buk-data-access-api-brasil-openapi.yml#GET /locations/{id}
+    - openapi/_original/buk-data-access-api-chile-openapi.json#GET /locations
+  absence:
+    path_segment:
+    - vacations
+    - absences
+    properties:
+      id: id
+      end_at: end_date
+      status: status
+      employee_id: employee_id
+      start_at: start_date
+      type: type
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#DELETE /vacations
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#GET /absences
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#GET /vacations
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#GET /vacations/{id}
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#POST /vacations
+  employment:
+    path_segment:
+    - jobs
+    properties:
+      id: id
+      status: status
+      employment_type:
+      - contract_type
+      - worker_type
+      effective_date: start_date
+      employee_id: employee_id
+      job_title: role
+      metadata: custom_attributes
+      pay_currency:
+      - currency_code
+      - currency
+      pay_rate: wage
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#GET /employees/{id}/jobs
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#PATCH /employees/{employee_id}/jobs/{id}
+    - openapi/_original/buk-data-access-api-brasil-openapi.json#POST /employees/{id}/jobs
+    - openapi/_original/buk-data-access-api-brasil-openapi.yml#GET /employees/{id}/jobs
+    - openapi/_original/buk-data-access-api-brasil-openapi.yml#PATCH /employees/{employee_id}/jobs/{id}

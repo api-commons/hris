@@ -1,0 +1,16 @@
+provider: weavix
+apis_io: https://apis.io/providers/weavix/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - people
+    properties:
+      last_name: lastName
+      first_name: firstName
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/weavix-rest-openapi.yml#DELETE /core/people/{id}
+    - openapi/_original/weavix-rest-openapi.yml#GET /v1/core/people
+    - openapi/_original/weavix-rest-openapi.yml#PUT /core/people/{id}

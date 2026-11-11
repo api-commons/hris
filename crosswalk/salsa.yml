@@ -1,0 +1,29 @@
+provider: salsa
+apis_io: https://apis.io/providers/salsa/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - workers
+    properties:
+      id: id
+      work_email: email
+      last_name: lastName
+      first_name: firstName
+      employment_type: workerType
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/salsa-openapi.yml#DELETE /employers/{employerId}/workers/{workerId}
+    - openapi/_original/salsa-openapi.yml#GET /employers/{employerId}/workers
+    - openapi/_original/salsa-openapi.yml#GET /employers/{employerId}/workers/{workerId}
+    - openapi/_original/salsa-openapi.yml#PATCH /employers/{employerId}/workers/{workerId}
+    - openapi/_original/salsa-openapi.yml#POST /employers/{employerId}/workers
+  employment:
+    path_segment:
+    - contracts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salsa-openapi.yml#GET /employers/{employerId}/workers/{workerId}/contracts
+    - openapi/_original/salsa-openapi.yml#POST /employers/{employerId}/workers/{workerId}/contracts

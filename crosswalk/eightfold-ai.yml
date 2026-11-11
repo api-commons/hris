@@ -1,0 +1,45 @@
+provider: eightfold-ai
+apis_io: https://apis.io/providers/eightfold-ai/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - employees
+    properties:
+      id: id
+      work_email: email
+      last_name: lastName
+      first_name:
+      - preferredFirstName
+      - firstName
+      status: employmentStatus
+      employment_type: employeeType
+      job_title:
+      - role
+      - title
+      location_id: location
+      phone: phone
+      employee_id:
+      - userId
+      - employeeId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/eightfold-ai-api-server-v2-service-service-openapi.yml#GET /api/v2/core/employees
+    - openapi/_original/eightfold-ai-api-server-v2-service-service-openapi.yml#GET /api/v2/core/employees/{profileId}
+    - openapi/_original/eightfold-ai-api-server-v2-service-service-openapi.yml#GET /api/v2/insights/diversity/employees
+    - openapi/_original/eightfold-ai-api-server-v2-service-service-openapi.yml#PATCH /api/v2/core/employees/{profileId}
+    - openapi/_original/eightfold-ai-api-server-v2-service-service-openapi.yml#POST /api/v2/core/employees
+  position:
+    path_segment:
+    - positions
+    properties:
+      id: positionId
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/eightfold-ai-api-server-v2-service-service-openapi.yml#GET /api/v2/core/positions
+    - openapi/_original/eightfold-ai-api-server-v2-service-service-openapi.yml#GET /api/v2/core/positions/{positionId}
+    - openapi/_original/eightfold-ai-api-server-v2-service-service-openapi.yml#PATCH /api/v2/core/positions/{positionId}
+    - openapi/_original/eightfold-ai-api-server-v2-service-service-openapi.yml#POST /api/v2/core/positions
+    - openapi/_original/eightfold-ai-api-server-v2-service-service-openapi.yml#PUT /api/v2/core/positions/{positionId}

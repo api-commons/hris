@@ -1,0 +1,301 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/hris/main/schema/employee.json",
+  "title": "Employee",
+  "description": "The common employee in People and HR, distilled from 55 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.818,
+      "x-commons-providers": 45,
+      "x-commons-spellings": [
+        "id",
+        "remote_id",
+        "remoteId",
+        "Id",
+        "uuid"
+      ]
+    },
+    "work_email": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.727,
+      "x-commons-providers": 40,
+      "x-commons-spellings": [
+        "email",
+        "work_email",
+        "emailAddress",
+        "workEmail",
+        "emails",
+        "Email",
+        "WorkEmail"
+      ]
+    },
+    "last_name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.709,
+      "x-commons-providers": 39,
+      "x-commons-spellings": [
+        "last_name",
+        "lastName",
+        "surname",
+        "lastname",
+        "LastName",
+        "legal_last_name",
+        "familyName",
+        "last-name"
+      ]
+    },
+    "first_name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.673,
+      "x-commons-providers": 37,
+      "x-commons-spellings": [
+        "first_name",
+        "firstName",
+        "firstname",
+        "FirstName",
+        "preferred_first_name",
+        "legal_first_name",
+        "preferredFirstName",
+        "givenName"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.582,
+      "x-commons-providers": 32,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "employment_status",
+        "employmentStatus",
+        "active",
+        "State"
+      ]
+    },
+    "hire_date": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.436,
+      "x-commons-providers": 24,
+      "x-commons-spellings": [
+        "start_date",
+        "startDate",
+        "hireDate",
+        "hire_date",
+        "HireDate",
+        "employment_start_date"
+      ]
+    },
+    "employment_type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.382,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "type",
+        "employmentType",
+        "workerType",
+        "employment_type",
+        "employeeType",
+        "employee_type",
+        "WorkerType",
+        "Type"
+      ]
+    },
+    "job_title": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.382,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "job_title",
+        "title",
+        "jobTitle",
+        "position",
+        "role"
+      ]
+    },
+    "display_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.364,
+      "x-commons-providers": 20,
+      "x-commons-spellings": [
+        "name",
+        "full_name",
+        "displayName",
+        "preferred_name",
+        "preferredName",
+        "display_name",
+        "DisplayName"
+      ]
+    },
+    "location_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.364,
+      "x-commons-providers": 20,
+      "x-commons-spellings": [
+        "location",
+        "location_id",
+        "work_location",
+        "office",
+        "locationId",
+        "work_location_id",
+        "workLocation"
+      ]
+    },
+    "date_of_birth": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.327,
+      "x-commons-providers": 18,
+      "x-commons-spellings": [
+        "date_of_birth",
+        "dateOfBirth",
+        "birthday",
+        "birthDate",
+        "birth_date",
+        "DateOfBirth",
+        "dob"
+      ]
+    },
+    "phone": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.327,
+      "x-commons-providers": 18,
+      "x-commons-spellings": [
+        "phone",
+        "phoneNumber",
+        "phone_number",
+        "Phone",
+        "workPhone",
+        "mobilePhone",
+        "PhoneNumber",
+        "work_phone"
+      ]
+    },
+    "employee_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.309,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "employeeId",
+        "employee_id",
+        "workerID",
+        "user_id",
+        "person_id",
+        "worker_id",
+        "userId",
+        "PersonId"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.291,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "metadata",
+        "custom_fields",
+        "attributes",
+        "customAttributes",
+        "custom_attributes",
+        "custom"
+      ]
+    },
+    "department_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.273,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "department",
+        "department_id",
+        "departmentId"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.236,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "createdAt",
+        "remote_created_at",
+        "created_at",
+        "dateCreated",
+        "CreationDate",
+        "created"
+      ],
+      "format": "date-time"
+    },
+    "employee_number": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.218,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "employee_number",
+        "employeeNumber",
+        "payroll_id",
+        "payrollId",
+        "badgeNumber",
+        "EmployeeNumber"
+      ]
+    },
+    "gender": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.218,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "gender"
+      ]
+    },
+    "manager_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.218,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "manager",
+        "manager_id",
+        "managerId",
+        "supervisor"
+      ]
+    },
+    "termination_date": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.218,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "termination_date",
+        "endDate",
+        "end_date",
+        "terminationDate"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "hris",
+    "concept": "employee",
+    "providers": 55,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

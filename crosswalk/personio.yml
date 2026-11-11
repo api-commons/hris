@@ -1,0 +1,18 @@
+provider: personio
+apis_io: https://apis.io/providers/personio/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - persons
+    properties:
+      id: id
+      work_email: email
+      last_name: last_name
+      first_name: first_name
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/personio-openapi.yml#GET /persons
+    - openapi/_original/personio-openapi.yml#PATCH /persons/{person_id}
+    - openapi/_original/personio-openapi.yml#POST /persons

@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/hris/main/schema/department.json",
+  "title": "Department",
+  "description": "The common department in People and HR, distilled from 13 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.769,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "id",
+        "remoteId",
+        "remote_id",
+        "uuid"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.769,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "name"
+      ]
+    },
+    "parent_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.308,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "parent",
+        "parent_id",
+        "parentId"
+      ]
+    },
+    "department_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.231,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "departmentId",
+        "department_id"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.231,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "description"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.231,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "modified_at",
+        "updated_at",
+        "updated",
+        "updatedAt"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "hris",
+    "concept": "department",
+    "providers": 13,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

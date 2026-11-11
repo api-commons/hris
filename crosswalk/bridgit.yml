@@ -1,0 +1,22 @@
+provider: bridgit
+apis_io: https://apis.io/providers/bridgit/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - persons
+    properties:
+      id: id
+      work_email: email
+      status: state
+      employment_type: type
+      job_title: title
+      display_name: name
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/bridgit-bench-openapi.yml#DELETE /rp/api/v1/accounts/{accountId}/Persons/{id}
+    - openapi/_original/bridgit-bench-openapi.yml#GET /rp/api/v1/accounts/{accountId}/Persons
+    - openapi/_original/bridgit-bench-openapi.yml#GET /rp/api/v1/accounts/{accountId}/Persons/{id}
+    - openapi/_original/bridgit-bench-openapi.yml#GET /rp/api/v1/accounts/{accountId}/external/persons/{externalId}
+    - openapi/_original/bridgit-bench-openapi.yml#PATCH /rp/api/v1/accounts/{accountId}/Persons/{id}

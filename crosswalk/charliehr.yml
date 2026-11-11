@@ -1,0 +1,53 @@
+provider: charliehr
+apis_io: https://apis.io/providers/charliehr/
+context: hris
+generated: '2026-11-10'
+concepts:
+  employee:
+    path_segment:
+    - team_members
+    properties:
+      id: id
+      work_email: email
+      last_name: last_name
+      first_name: first_name
+      hire_date: start_date
+      location_id: office
+      phone: phone_number
+      manager_id: manager
+      termination_date: end_date
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/charliehr-openapi.yml#GET /team_members
+    - openapi/_original/charliehr-openapi.yml#GET /team_members/{id}
+  team:
+    path_segment:
+    - teams
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/charliehr-openapi.yml#GET /teams
+    - openapi/_original/charliehr-openapi.yml#GET /teams/{id}
+  work_location:
+    path_segment:
+    - offices
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/charliehr-openapi.yml#GET /offices
+    - openapi/_original/charliehr-openapi.yml#GET /offices/{id}
+  absence:
+    path_segment:
+    - leave_requests
+    properties:
+      id: id
+      end_at: end_date
+      status: status
+      start_at: start_date
+      type: leave_type
+      created_at: created_at
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/charliehr-openapi.yml#GET /leave_requests
+    - openapi/_original/charliehr-openapi.yml#GET /leave_requests/{id}
+    - openapi/_original/charliehr-openapi.yml#GET /team_members/{id}/leave_requests
