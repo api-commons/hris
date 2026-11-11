@@ -14,8 +14,8 @@ concepts:
       last_name: LastName
       first_name: FirstName
       hire_date: HireDate
-      employment_type: WorkerType
       display_name: DisplayName
+      employment_type: WorkerType
       date_of_birth: DateOfBirth
       phone: PhoneNumber
       employee_id: PersonId
@@ -33,8 +33,8 @@ concepts:
     properties:
       id: AbsenceId
       end_at: EndDate
-      start_at: StartDate
       type: AbsenceType
+      start_at: StartDate
       amount: Duration
     core_coverage: 0.667
     evidence:

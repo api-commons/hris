@@ -23,7 +23,8 @@
       "x-commons-share": 0.769,
       "x-commons-providers": 10,
       "x-commons-spellings": [
-        "name"
+        "name",
+        "title"
       ]
     },
     "parent_id": {

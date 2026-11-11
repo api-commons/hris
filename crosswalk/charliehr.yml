@@ -14,8 +14,8 @@ concepts:
       hire_date: start_date
       location_id: office
       phone: phone_number
-      manager_id: manager
       termination_date: end_date
+      manager_id: manager
     core_coverage: 0.8
     evidence:
     - openapi/_original/charliehr-openapi.yml#GET /team_members
@@ -43,8 +43,8 @@ concepts:
       id: id
       end_at: end_date
       status: status
-      start_at: start_date
       type: leave_type
+      start_at: start_date
       created_at: created_at
     core_coverage: 0.833
     evidence:

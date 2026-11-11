@@ -81,8 +81,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 46
-      share: 0.836
+      providers: 47
+      share: 0.855
       type: string
       spellings:
       - id
@@ -92,8 +92,8 @@ concepts:
       - uuid
     - name: work_email
       tier: core
-      providers: 40
-      share: 0.727
+      providers: 42
+      share: 0.764
       type: string
       spellings:
       - email
@@ -142,23 +142,37 @@ concepts:
       - employment_status
       - employmentStatus
       - active
+      - isActive
       - State
     - name: hire_date
       tier: extended
-      providers: 25
-      share: 0.455
+      providers: 27
+      share: 0.491
       type: string
       spellings:
       - start_date
-      - startDate
       - hireDate
+      - startDate
       - hire_date
       - HireDate
       - employment_start_date
+    - name: display_name
+      tier: extended
+      providers: 23
+      share: 0.418
+      type: string
+      spellings:
+      - name
+      - full_name
+      - displayName
+      - preferred_name
+      - preferredName
+      - display_name
+      - DisplayName
     - name: employment_type
       tier: extended
-      providers: 21
-      share: 0.382
+      providers: 22
+      share: 0.4
       type: string
       spellings:
       - type
@@ -171,8 +185,8 @@ concepts:
       - Type
     - name: job_title
       tier: extended
-      providers: 21
-      share: 0.382
+      providers: 22
+      share: 0.4
       type: string
       spellings:
       - job_title
@@ -180,23 +194,10 @@ concepts:
       - jobTitle
       - position
       - role
-    - name: display_name
-      tier: extended
-      providers: 20
-      share: 0.364
-      type: string
-      spellings:
-      - name
-      - full_name
-      - displayName
-      - preferred_name
-      - preferredName
-      - display_name
-      - DisplayName
     - name: location_id
       tier: extended
-      providers: 20
-      share: 0.364
+      providers: 21
+      share: 0.382
       type: string
       spellings:
       - location
@@ -241,12 +242,12 @@ concepts:
       spellings:
       - employeeId
       - employee_id
-      - workerID
       - user_id
       - person_id
       - worker_id
       - userId
       - PersonId
+      - workerId
     - name: metadata
       tier: extended
       providers: 16
@@ -259,6 +260,7 @@ concepts:
       - customAttributes
       - custom_attributes
       - custom
+      - properties
     - name: department_id
       tier: extended
       providers: 15
@@ -280,6 +282,16 @@ concepts:
       - dateCreated
       - CreationDate
       - created
+    - name: termination_date
+      tier: extended
+      providers: 13
+      share: 0.236
+      type: string
+      spellings:
+      - termination_date
+      - endDate
+      - end_date
+      - terminationDate
     - name: employee_number
       tier: extended
       providers: 12
@@ -309,17 +321,7 @@ concepts:
       - manager_id
       - managerId
       - supervisor
-    - name: termination_date
-      tier: extended
-      providers: 12
-      share: 0.218
-      type: string
-      spellings:
-      - termination_date
-      - endDate
-      - end_date
-      - terminationDate
-    long_tail_count: 874
+    long_tail_count: 916
     long_tail_sample:
     - team_ids
     - updated_at
@@ -337,19 +339,23 @@ concepts:
     - ssn
     - employer_id
     - home_phone
+    - position_id
     - timezone
     - zip
     - citizenship
     - compensation
     - description
     - designation
+    - division
     - emergency_contact
     - ethnicity
+    - group
     - home_address
     - home_phone_number
     - legal_entity_id
+    - mobile_number
     - pay_type
-    - position_id
+    - rate
     - username
     - additional_managers
     - addresses
@@ -357,10 +363,6 @@ concepts:
     - bank_accounts
     - birth_day
     - branch
-    - branch_id
-    - code
-    - company
-    - company_name
   department:
     segments_seen:
       departments: 17
@@ -418,6 +420,7 @@ concepts:
       type: string
       spellings:
       - name
+      - title
     - name: parent_id
       tier: extended
       providers: 4
@@ -455,7 +458,6 @@ concepts:
     long_tail_count: 40
     long_tail_sample:
     - created_at
-    - metadata
     - allocation_percentage
     - archived_at
     - branch
@@ -481,8 +483,10 @@ concepts:
     - level
     - location_id
     - manager_id
+    - metadata
     - mode
     - owning_application
+    - priority
     - public_id
     - raw_data
     - skip_webhook_notification
@@ -492,7 +496,6 @@ concepts:
     - str_opunit_name
     - time_stamp
     - type
-    - values
     - version
   team:
     segments_seen:
@@ -618,20 +621,13 @@ concepts:
       spellings:
       - code
       - job_code
-    - name: employee_id
-      tier: extended
-      providers: 3
-      share: 0.273
-      type: string
-      spellings:
-      - employee_id
-      - employee
     long_tail_count: 83
     long_tail_sample:
     - color
     - created_at
     - created_by
     - descriptor
+    - employee_id
     - group_id
     - is_filled
     - job_profile
@@ -667,7 +663,6 @@ concepts:
     - hourly_rate
     - ical
     - internal_date
-    - is_available_for_recruit
   work_location:
     segments_seen:
       locations: 16
@@ -757,9 +752,9 @@ concepts:
       - city
     - name: metadata
       tier: extended
-      providers: 5
-      share: 0.25
-      type: array
+      providers: 4
+      share: 0.2
+      type: object
       spellings:
       - custom_fields
       - metadata
@@ -770,7 +765,7 @@ concepts:
       type: string
       spellings:
       - type
-    long_tail_count: 173
+    long_tail_count: 174
     long_tail_sample:
     - created_at
     - updated_at
@@ -780,6 +775,7 @@ concepts:
     - location_id
     - longitude
     - usages
+    - about_url
     - access
     - account_number
     - actions
@@ -811,7 +807,6 @@ concepts:
     - code
     - comment
     - company_id
-    - contact
   absence:
     segments_seen:
       absences: 9
@@ -861,18 +856,19 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 14
-      share: 0.824
+      providers: 15
+      share: 0.882
       type: string
       spellings:
       - id
       - remote_id
       - _id
       - AbsenceId
+      - absence_id
     - name: employee_id
       tier: core
-      providers: 11
-      share: 0.647
+      providers: 12
+      share: 0.706
       type: integer
       spellings:
       - employee_id
@@ -899,6 +895,18 @@ concepts:
       spellings:
       - status
       - Status
+    - name: type
+      tier: core
+      providers: 11
+      share: 0.647
+      type: string
+      spellings:
+      - type
+      - leave_type
+      - request_type
+      - kind
+      - absenceType
+      - AbsenceType
     - name: start_at
       tier: core
       providers: 10
@@ -910,18 +918,6 @@ concepts:
       - start
       - StartDate
       - startDate
-    - name: type
-      tier: core
-      providers: 10
-      share: 0.588
-      type: string
-      spellings:
-      - type
-      - leave_type
-      - request_type
-      - kind
-      - absenceType
-      - AbsenceType
     - name: amount
       tier: extended
       providers: 5
@@ -942,7 +938,7 @@ concepts:
       - created_at
       - remote_created_at
       - createdAt
-    long_tail_count: 113
+    long_tail_count: 115
     long_tail_sample:
     - absence_type_id
     - description

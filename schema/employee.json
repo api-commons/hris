@@ -8,8 +8,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.836,
-      "x-commons-providers": 46,
+      "x-commons-share": 0.855,
+      "x-commons-providers": 47,
       "x-commons-spellings": [
         "id",
         "remote_id",
@@ -21,8 +21,8 @@
     "work_email": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.727,
-      "x-commons-providers": 40,
+      "x-commons-share": 0.764,
+      "x-commons-providers": 42,
       "x-commons-spellings": [
         "email",
         "work_email",
@@ -76,28 +76,44 @@
         "employment_status",
         "employmentStatus",
         "active",
+        "isActive",
         "State"
       ]
     },
     "hire_date": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.455,
-      "x-commons-providers": 25,
+      "x-commons-share": 0.491,
+      "x-commons-providers": 27,
       "x-commons-spellings": [
         "start_date",
-        "startDate",
         "hireDate",
+        "startDate",
         "hire_date",
         "HireDate",
         "employment_start_date"
       ]
     },
+    "display_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.418,
+      "x-commons-providers": 23,
+      "x-commons-spellings": [
+        "name",
+        "full_name",
+        "displayName",
+        "preferred_name",
+        "preferredName",
+        "display_name",
+        "DisplayName"
+      ]
+    },
     "employment_type": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.382,
-      "x-commons-providers": 21,
+      "x-commons-share": 0.4,
+      "x-commons-providers": 22,
       "x-commons-spellings": [
         "type",
         "employmentType",
@@ -112,8 +128,8 @@
     "job_title": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.382,
-      "x-commons-providers": 21,
+      "x-commons-share": 0.4,
+      "x-commons-providers": 22,
       "x-commons-spellings": [
         "job_title",
         "title",
@@ -122,26 +138,11 @@
         "role"
       ]
     },
-    "display_name": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.364,
-      "x-commons-providers": 20,
-      "x-commons-spellings": [
-        "name",
-        "full_name",
-        "displayName",
-        "preferred_name",
-        "preferredName",
-        "display_name",
-        "DisplayName"
-      ]
-    },
     "location_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.364,
-      "x-commons-providers": 20,
+      "x-commons-share": 0.382,
+      "x-commons-providers": 21,
       "x-commons-spellings": [
         "location",
         "location_id",
@@ -191,12 +192,12 @@
       "x-commons-spellings": [
         "employeeId",
         "employee_id",
-        "workerID",
         "user_id",
         "person_id",
         "worker_id",
         "userId",
-        "PersonId"
+        "PersonId",
+        "workerId"
       ]
     },
     "metadata": {
@@ -210,7 +211,8 @@
         "attributes",
         "customAttributes",
         "custom_attributes",
-        "custom"
+        "custom",
+        "properties"
       ]
     },
     "department_id": {
@@ -238,6 +240,18 @@
         "created"
       ],
       "format": "date-time"
+    },
+    "termination_date": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.236,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "termination_date",
+        "endDate",
+        "end_date",
+        "terminationDate"
+      ]
     },
     "employee_number": {
       "type": "string",
@@ -272,18 +286,6 @@
         "manager_id",
         "managerId",
         "supervisor"
-      ]
-    },
-    "termination_date": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.218,
-      "x-commons-providers": 12,
-      "x-commons-spellings": [
-        "termination_date",
-        "endDate",
-        "end_date",
-        "terminationDate"
       ]
     }
   },

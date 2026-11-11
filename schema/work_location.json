@@ -68,10 +68,10 @@
       ]
     },
     "metadata": {
-      "type": "array",
+      "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.25,
-      "x-commons-providers": 5,
+      "x-commons-share": 0.2,
+      "x-commons-providers": 4,
       "x-commons-spellings": [
         "custom_fields",
         "metadata"

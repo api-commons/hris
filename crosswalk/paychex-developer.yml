@@ -7,10 +7,9 @@ concepts:
     path_segment:
     - workers
     properties:
-      employment_type: workerType
       display_name: name
+      employment_type: workerType
       employee_id: workerId
-      metadata: metadata
     core_coverage: 0.0
     evidence:
     - openapi/_original/paychex-workers-openapi.yml#GET /companies/{companyId}/workers

@@ -10,9 +10,9 @@ concepts:
       id: id
       work_email: email
       status: state
+      display_name: name
       employment_type: type
       job_title: title
-      display_name: name
     core_coverage: 0.6
     evidence:
     - openapi/_original/bridgit-bench-openapi.yml#DELETE /rp/api/v1/accounts/{accountId}/Persons/{id}

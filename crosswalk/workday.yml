@@ -10,14 +10,14 @@ concepts:
     properties:
       id: id
       hire_date: hireDate
+      display_name: preferredName
       employment_type: workerType
       job_title: position
-      display_name: preferredName
       location_id: location
       date_of_birth: dateOfBirth
       employee_id: workerID
-      gender: gender
       termination_date: terminationDate
+      gender: gender
     core_coverage: 0.2
     evidence:
     - openapi/_original/hcm.yml#GET /workers

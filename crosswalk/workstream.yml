@@ -14,10 +14,10 @@ concepts:
       first_name: first_name
       status: status
       hire_date: start_date
+      display_name: preferred_name
       job_title:
       - position
       - job_title
-      display_name: preferred_name
       location_id:
       - work_location
       - location
@@ -40,7 +40,7 @@ concepts:
     - departments
     properties:
       id: uuid
-      name: name
+      name: title
     core_coverage: 1.0
     evidence:
     - openapi/_original/workstream-public-api-openapi-original.json#GET /departments
@@ -62,8 +62,7 @@ concepts:
     - locations
     properties:
       id: uuid
-      name: name
-      metadata: custom_fields
+      name: title
     core_coverage: 0.667
     evidence:
     - openapi/_original/workstream-public-api-openapi-original.json#GET /locations

@@ -8,20 +8,21 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.824,
-      "x-commons-providers": 14,
+      "x-commons-share": 0.882,
+      "x-commons-providers": 15,
       "x-commons-spellings": [
         "id",
         "remote_id",
         "_id",
-        "AbsenceId"
+        "AbsenceId",
+        "absence_id"
       ]
     },
     "employee_id": {
       "type": "integer",
       "x-commons-tier": "core",
-      "x-commons-share": 0.647,
-      "x-commons-providers": 11,
+      "x-commons-share": 0.706,
+      "x-commons-providers": 12,
       "x-commons-spellings": [
         "employee_id",
         "employee",
@@ -54,6 +55,20 @@
         "Status"
       ]
     },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.647,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "type",
+        "leave_type",
+        "request_type",
+        "kind",
+        "absenceType",
+        "AbsenceType"
+      ]
+    },
     "start_at": {
       "type": "string",
       "x-commons-tier": "core",
@@ -67,20 +82,6 @@
         "startDate"
       ],
       "format": "date-time"
-    },
-    "type": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.588,
-      "x-commons-providers": 10,
-      "x-commons-spellings": [
-        "type",
-        "leave_type",
-        "request_type",
-        "kind",
-        "absenceType",
-        "AbsenceType"
-      ]
     },
     "amount": {
       "type": "number",

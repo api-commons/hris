@@ -12,8 +12,8 @@ concepts:
       work_email: email
       last_name: last_name
       status: employment_status
-      job_title: position
       display_name: full_name
+      job_title: position
       location_id: location
       date_of_birth: date_of_birth
       department_id: department
@@ -27,7 +27,6 @@ concepts:
     - positions
     properties:
       id: id
-      employee_id: employee
     core_coverage: 0.5
     evidence:
     - openapi/_original/hr-partner-rest-api-openapi.yml#GET /positions
@@ -39,8 +38,8 @@ concepts:
       id: id
       employee_id: employee
       end_at: end_date
-      start_at: start_date
       type: leave_type
+      start_at: start_date
       amount: duration
     core_coverage: 0.833
     evidence:

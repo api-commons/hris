@@ -18,8 +18,8 @@ concepts:
       location_id: locationId
       phone: phoneNumber
       created_at: createdAt
-      manager_id: managerId
       termination_date: endDate
+      manager_id: managerId
     core_coverage: 1.0
     evidence:
     - openapi/_original/humaans-api-openapi.yml#DELETE /people/{id}

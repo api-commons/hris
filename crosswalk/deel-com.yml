@@ -28,13 +28,13 @@ concepts:
       hire_date:
       - start_date
       - hire_date
+      display_name:
+      - full_name
+      - preferred_name
       employment_type:
       - type
       - employment_type
       job_title: job_title
-      display_name:
-      - full_name
-      - preferred_name
       location_id: work_location
       date_of_birth:
       - birth_date

@@ -6,8 +6,14 @@ concepts:
   employee:
     path_segment:
     - employees
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      work_email: email
+      hire_date: start_date
+      display_name: name
+      employee_id: employee_id
+      metadata: properties
+      termination_date: termination_date
+    core_coverage: 0.2
     evidence:
     - openapi/_original/wagestream-integrations-api-openapi.json#GET /employees
     - openapi/_original/wagestream-integrations-api-openapi.json#POST /employees
@@ -17,8 +23,11 @@ concepts:
     path_segment:
     - absences
     properties:
+      id: absence_id
+      employee_id: employee_id
       status: status
-    core_coverage: 0.167
+      type: type
+    core_coverage: 0.667
     evidence:
     - openapi/_original/wagestream-integrations-api-openapi.json#GET /absences
     - openapi/_original/wagestream-integrations-api-openapi.json#POST /absences

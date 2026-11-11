@@ -29,8 +29,8 @@ concepts:
       employee_id: employeeId
       end_at: endDate
       status: status
-      start_at: startDate
       type: type
+      start_at: startDate
     core_coverage: 1.0
     evidence:
     - openapi/_original/workmotion-openapi.yml#GET /absences

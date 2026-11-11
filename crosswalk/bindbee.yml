@@ -21,10 +21,10 @@ concepts:
       metadata: custom_fields
       department_id: department
       created_at: remote_created_at
+      termination_date: termination_date
       employee_number: employee_number
       gender: gender
       manager_id: manager
-      termination_date: termination_date
     core_coverage: 1.0
     evidence:
     - openapi/_original/bindbee-openapi.json#GET /api/hris/v1/employees
@@ -74,8 +74,8 @@ concepts:
       employee_id: employee
       end_at: end_time
       status: status
-      start_at: start_time
       type: request_type
+      start_at: start_time
       amount:
       - units
       - amount

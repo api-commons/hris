@@ -24,12 +24,12 @@ concepts:
       date_of_birth: date_of_birth
       metadata: custom_fields
       created_at: remote_created_at
+      termination_date: termination_date
       employee_number: employee_number
       gender: gender
       manager_id:
       - manager_id
       - manager
-      termination_date: termination_date
     core_coverage: 1.0
     evidence:
     - openapi/_original/kombo-openapi.json#GET /hris/employees
@@ -72,10 +72,10 @@ concepts:
       - end_date
       - end_time
       status: status
+      type: type
       start_at:
       - start_date
       - start_time
-      type: type
       amount: amount
       created_at: remote_created_at
     core_coverage: 1.0
