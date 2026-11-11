@@ -12,12 +12,12 @@ generated. Every number below is a count of providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| employee | 61 | 55 | id 82%, work_email 73%, last_name 71%, first_name 67%, status 58% | employees 44, people 9, workers 8, employee 8 |
+| employee | 61 | 55 | id 84%, work_email 73%, last_name 71%, first_name 67%, status 58% | employees 44, people 9, workers 8, employee 8 |
 | department | 21 | 13 | id 77%, name 77% | departments 17, department 3, cost-centers 2, cost_centers 2 |
 | team | 7 | 5 | id 80%, name 60% | teams 7 |
 | position | 14 | 11 | id 100%, name 73% | positions 12, job-titles 1, job_titles 1, jobtitles 1 |
 | work_location | 27 | 20 | id 80%, name 75%, status 50% | locations 16, location 5, branches 4, offices 3 |
-| absence | 18 | 16 | id 81%, end_at 69%, status 69%, employee_id 62%, start_at 62%, type 62% | absences 9, leave_requests 3, leave 3, time-off 2 |
+| absence | 19 | 17 | id 82%, employee_id 65%, end_at 65%, status 65%, start_at 59%, type 59% | absences 9, leave_requests 3, leave 3, leaves 2 |
 | employment | 19 | 14 | id 86%, status 64%, employment_type 57%, effective_date 50%, employee_id 50%, job_title 50% | jobs 14, employments 4, contracts 4, employment 1 |
 
 Cohort: 171 providers with harvested OpenAPI, 61 crosswalks. Of the providers exposing a employee: 67% create, 95% list, 87% fetch, 57% update, 25% delete. Generated 2026-11-10 by build.py.

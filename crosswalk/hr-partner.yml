@@ -37,8 +37,8 @@ concepts:
     - absences
     properties:
       id: id
-      end_at: end_date
       employee_id: employee
+      end_at: end_date
       start_at: start_date
       type: leave_type
       amount: duration

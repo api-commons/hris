@@ -37,8 +37,8 @@ concepts:
     - absences
     properties:
       id: id
-      end_at: end
       employee_id: employeeId
+      end_at: end
     core_coverage: 0.5
     evidence:
     - openapi/_original/quinyx-api-v2-openapi.yml#DELETE /v2/schedule/groups/{groupId}/absences/{absenceId}

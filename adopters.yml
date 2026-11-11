@@ -110,6 +110,7 @@ adopters:
   apis_io: https://apis.io/providers/factorial-hr/
   crosswalk: crosswalk/factorial-hr.yml
   concepts:
+  - absence
   - employee
   - work_location
 - provider: fountain-com

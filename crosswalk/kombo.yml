@@ -67,11 +67,11 @@ concepts:
       id:
       - id
       - remote_id
+      employee_id: employee_id
       end_at:
       - end_date
       - end_time
       status: status
-      employee_id: employee_id
       start_at:
       - start_date
       - start_time

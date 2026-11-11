@@ -50,9 +50,9 @@ concepts:
     - time-off
     properties:
       id: id
+      employee_id: employee_id
       end_at: end_date
       status: status
-      employee_id: employee_id
       start_at: start_date
       type: type
     core_coverage: 1.0

@@ -40,9 +40,9 @@ concepts:
     - absences
     properties:
       id: _id
+      employee_id: userId
       end_at: end
       status: status
-      employee_id: userId
       start_at: start
       type: absenceType
       created_at: createdAt

@@ -1129,13 +1129,21 @@
      "company_id": "integer",
      "legal_entity_id": "integer",
      "manager_id": "integer",
-     "timeoff_manager_id": "integer"
+     "timeoff_manager_id": "integer",
+     "id": "integer",
+     "start_date": "string",
+     "job_title": "string",
+     "team_ids": "array"
     },
     "evidence": [
      "openapi/_original/factorial-openapi.yml#GET /v2/core/employees",
      "openapi/_original/factorial-openapi.yml#GET /v2/core/employees/{id}",
      "openapi/_original/factorial-openapi.yml#POST /v2/core/employees",
-     "openapi/_original/factorial-openapi.yml#PUT /v2/core/employees/{id}"
+     "openapi/_original/factorial-openapi.yml#PUT /v2/core/employees/{id}",
+     "openapi/_original/factorial-resources-api-openapi.yml#GET /resources/employees/employees",
+     "openapi/_original/factorial-resources-api-openapi.yml#GET /resources/employees/employees/{id}",
+     "openapi/_original/factorial-resources-api-openapi.yml#POST /resources/employees/employees",
+     "openapi/_original/factorial-resources-api-openapi.yml#PUT /resources/employees/employees/{id}"
     ]
    },
    "fountain-com": {
@@ -6219,11 +6227,13 @@
    },
    "buk": {
     "segments": [
+     "absence",
      "vacations",
      "absences"
     ],
     "operations": [
      "DELETE collection",
+     "DELETE item",
      "GET collection",
      "GET item",
      "POST collection"
@@ -6251,21 +6261,30 @@
      "application_end_date": "string",
      "justification": "string",
      "created_at": "string",
-     "updated_at": "string"
+     "updated_at": "string",
+     "pagination": "object",
+     "data": "array",
+     "absence": null,
+     "deleted": "boolean",
+     "absence_type_id": "integer",
+     "absence_type_code": "string",
+     "medic_rut": "string",
+     "licence_number": "string",
+     "medic_name": "string"
     },
     "evidence": [
+     "openapi/_original/buk-data-access-api-brasil-openapi.json#DELETE /absences/absence",
+     "openapi/_original/buk-data-access-api-brasil-openapi.json#DELETE /absences/absence/{id}",
      "openapi/_original/buk-data-access-api-brasil-openapi.json#DELETE /vacations",
      "openapi/_original/buk-data-access-api-brasil-openapi.json#GET /absences",
+     "openapi/_original/buk-data-access-api-brasil-openapi.json#GET /absences/absence",
+     "openapi/_original/buk-data-access-api-brasil-openapi.json#GET /absences/absence/{id}",
+     "openapi/_original/buk-data-access-api-brasil-openapi.json#GET /employees/absences/absences",
      "openapi/_original/buk-data-access-api-brasil-openapi.json#GET /vacations",
      "openapi/_original/buk-data-access-api-brasil-openapi.json#GET /vacations/{id}",
+     "openapi/_original/buk-data-access-api-brasil-openapi.json#POST /absences/absence",
      "openapi/_original/buk-data-access-api-brasil-openapi.json#POST /vacations",
-     "openapi/_original/buk-data-access-api-brasil-openapi.yml#DELETE /vacations",
-     "openapi/_original/buk-data-access-api-brasil-openapi.yml#GET /absences",
-     "openapi/_original/buk-data-access-api-brasil-openapi.yml#GET /vacations",
-     "openapi/_original/buk-data-access-api-brasil-openapi.yml#GET /vacations/{id}",
-     "openapi/_original/buk-data-access-api-brasil-openapi.yml#POST /vacations",
-     "openapi/_original/buk-data-access-api-chile-openapi.json#DELETE /vacations",
-     "openapi/_original/buk-data-access-api-chile-openapi.json#GET /absences"
+     "openapi/_original/buk-data-access-api-brasil-openapi.yml#DELETE /absences/absence"
     ]
    },
    "charliehr": {
@@ -6434,6 +6453,34 @@
      "openapi/_original/employment-hero-payroll-my-swagger.json#GET /api/v2/ess/{employeeId}/leave",
      "openapi/_original/employment-hero-payroll-my-swagger.json#GET /api/v2/ess/{employeeId}/leave/{leaveRequestId}",
      "openapi/_original/employment-hero-payroll-my-swagger.json#POST /api/v2/business/{businessId}/employee/{employeeId}/document/{employeeDocumentId}/leave/{leaveRequestId}"
+    ]
+   },
+   "factorial-hr": {
+    "segments": [
+     "leaves"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "employee_id": "integer",
+     "leave_type_id": "integer",
+     "start_on": "string",
+     "finish_on": "string",
+     "half_day": "string",
+     "description": "string"
+    },
+    "evidence": [
+     "openapi/_original/factorial-resources-api-openapi.yml#DELETE /resources/time_off/leaves/{id}",
+     "openapi/_original/factorial-resources-api-openapi.yml#GET /resources/time_off/leaves",
+     "openapi/_original/factorial-resources-api-openapi.yml#GET /resources/time_off/leaves/{id}",
+     "openapi/_original/factorial-resources-api-openapi.yml#POST /resources/time_off/leaves",
+     "openapi/_original/factorial-resources-api-openapi.yml#PUT /resources/time_off/leaves/{id}"
     ]
    },
    "genesys": {
@@ -7200,6 +7247,43 @@
      "openapi/_original/buk-data-access-api-chile-openapi.yml#GET /employees/{id}/jobs",
      "openapi/_original/buk-data-access-api-chile-openapi.yml#PATCH /employees/{employee_id}/jobs/{id}",
      "openapi/_original/buk-data-access-api-chile-openapi.yml#POST /employees/{id}/jobs"
+    ]
+   },
+   "connecteam": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "jobId": "string",
+     "title": "string",
+     "code": "string",
+     "color": "string",
+     "customFields": "array",
+     "description": "string",
+     "fenceSize": null,
+     "gps": null,
+     "isDeleted": "boolean",
+     "assign": "object",
+     "useParentData": null,
+     "parentId": null,
+     "subJobs": null,
+     "instanceIds": null,
+     "requestId": "string",
+     "data": "object"
+    },
+    "evidence": [
+     "openapi/_original/connecteam-openapi.json#DELETE /jobs/v1/jobs/{jobId}",
+     "openapi/_original/connecteam-openapi.json#GET /jobs/v1/jobs",
+     "openapi/_original/connecteam-openapi.json#GET /jobs/v1/jobs/{jobId}",
+     "openapi/_original/connecteam-openapi.json#POST /jobs/v1/jobs",
+     "openapi/_original/connecteam-openapi.json#PUT /jobs/v1/jobs/{jobId}"
     ]
    },
    "dailypay": {

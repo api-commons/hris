@@ -34,8 +34,8 @@ concepts:
     path_segment:
     - leave
     properties:
-      status: Status
       employee_id: Employee
+      status: Status
     core_coverage: 0.333
     evidence:
     - openapi/_original/deputy-deputy-openapi.yml#GET /v1/my/leave

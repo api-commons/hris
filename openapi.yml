@@ -380,7 +380,7 @@ paths:
       tags:
       - Absences
       x-commons-tier: core
-      x-commons-share: 0.944
+      x-commons-share: 0.947
       responses:
         '200':
           description: OK
@@ -405,7 +405,7 @@ paths:
       tags:
       - Absences
       x-commons-tier: core
-      x-commons-share: 0.667
+      x-commons-share: 0.684
       responses:
         '200':
           description: OK
@@ -426,7 +426,7 @@ paths:
       tags:
       - Absences
       x-commons-tier: core
-      x-commons-share: 0.5
+      x-commons-share: 0.526
       responses:
         '200':
           description: OK
@@ -439,13 +439,31 @@ paths:
       tags:
       - Absences
       x-commons-tier: extended
-      x-commons-share: 0.222
+      x-commons-share: 0.316
       responses:
         '200':
           description: OK
           content:
             application/json:
               schema: *id005
+    patch:
+      operationId: updateAbsence
+      summary: Update an absence
+      tags:
+      - Absences
+      x-commons-tier: extended
+      x-commons-share: 0.211
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
   /employments:
     get:
       operationId: listEmployments

@@ -71,9 +71,9 @@ concepts:
       id:
       - id
       - remote_id
+      employee_id: employee
       end_at: end_time
       status: status
-      employee_id: employee
       start_at: start_time
       type: request_type
       amount:
