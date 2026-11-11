@@ -20,7 +20,7 @@ generated. Every number below is a count of providers.
 | absence | 19 | 17 | id 88%, employee_id 71%, end_at 65%, status 65%, type 65%, start_at 59% | absences 9, leave_requests 3, leave 3, leaves 2 |
 | employment | 19 | 14 | id 86%, status 64%, employment_type 57%, effective_date 50%, employee_id 50%, job_title 50% | jobs 14, employments 4, contracts 4, employment 1 |
 
-Cohort: 171 providers with harvested OpenAPI, 61 crosswalks. Of the providers exposing a employee: 67% create, 95% list, 87% fetch, 57% update, 25% delete. Generated 2026-11-10 by build.py.
+Cohort: 171 providers with harvested OpenAPI, 61 crosswalks. Of the providers exposing a employee: 67% create, 95% list, 87% fetch, 57% update, 25% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

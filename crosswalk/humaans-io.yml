@@ -1,7 +1,7 @@
 provider: humaans-io
 apis_io: https://apis.io/providers/humaans-io/
 context: hris
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   employee:
     path_segment:
